@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+html(lang="ja", prefix="og: http://ogp.me/ns#")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(name="description", content="密にならずに今、会いに行ける――リモートで握手会を再現したWebサービス「Re:Meet LIVE」（リミートライブ）")
+    meta(property="og:site_name", content="Re:MEET LIVE | リモートでミートしてLIVEで応援")
+    meta(property="og:type", content="website")
+    meta(property="og:url", content="https://remeet.live")
+    meta(property="og:title", content="Re:MEET LIVE | リモートでミートしてLIVEで応援")
+    meta(property="og:description", content="密にならずに今、会いに行ける――リモートで握手会を再現したWebサービス「Re:Meet LIVE」（リミートライブ）")
+    meta(property="og:image", content="https://remeet.live/ogp.png")
+    meta(property="fb:app_id", content="2627859857496859")
+    meta(name="twitter:card", content="summary")
+    meta(name="twitter:site", content="@remeetlive")
+    title Re:MEET LIVE | リモートでミートしてLIVEで応援
+  body
+    .container.main(style="display:none")
+      .global-header
+        .branding
+          a(href="/") Re:Meet Live
+        label#menu-btn(for="menu-toggle") :
+        input#menu-toggle(type="checkbox")
+        #menu.sp
+          -
+            var menus = [
+              { href: '#release', label: 'お知らせ'},
+              { href: '#price', label: '価格'},
+              { href: '#playground', label: 'お試し版'},
+              { href: '#partner', label: 'パートナー'},
+              { href: '#contact', label: 'お問い合わせ'},
+              { href: '#share', label: 'シェア'},
+            ]
+          each menu in menus
+            a(href=`${menu.href}`) #{menu.label} 
+      .global-body
+        section.hero
+          .section-content
+            .flex
+              .logo
+                img(src="/images/remeet-logo-small.png" width="80%")
+              .title
+                span.inline-block 密にならずに逢いにいける
+                span.inline-block ファンミーティングをオンライン化。
+                span.inline-block 握手会・サイン会の代替販促会専用システム
+              p
+                | 「リミートライブ」は、コロナ渦において、コンサートや握手会といった集客を伴うイベントの開催ができなくなってしまったタレントさまと、「推し」に逢えなくなってしまったファンとを繋ぐ、密にならずに逢いに行けるWebサービスです。「リミートしよう！」を合言葉に是非ご活用ください。
+              .sns
+                a(href="https://twitter.com/remeetlive") 公式ツイッター
+                a(href="https://www.facebook.com/remeetlive") 公式FACEBOOKページ
+                a(href="https://www.youtube.com/channel/UCruXABY_sqMuDZjW4H5-DKQ") 公式YOUTUBE
+            .flex
+              img(src="/images/remeet-mock.png", alt="製品画像")
+        section.section#playground
+          h1
+            .section-title 体験版
+            .section-subtile PLAYGROUND
+          .section-content
+            p
+              .inline-block リミートを存分にお楽しみいただくために、
+              .inline-block イベント前にリミートの使用方法を
+              .inline-block 確認しておきましょう。
+          .section-action
+            a.btn(href="https://playground.remeet.live/") 事前にリミートを試してみる
+        section.section#partner
+          h1
+            .section-title オフィシャルパートナー
+            .section-subtile RELEASE
+          .section-content
+            p
+              |「リミートライブ」はライブハウスと同様の「箱貸し方式」を採用いたします。サービス開始当初より、安定運営にご協力をいただける企業様をオフィシャルパートナーとしております。
+            -
+              var areas = [
+                {
+                  name: '取り扱い代理店',
+                  items : [
+                    {
+                      name: '株式会社クオラス',
+                      link: 'https://quaras.co.jp'
+                    }
+                  ]
+                },
+                {
+                  name: 'チケット<br>プラットフォーム',
+                  items : [
+                    {
+                      name: 'Peatix japan 株式会社',
+                      link: 'https://peatix.com'
+                    }
+                  ]
+                },
+                {
+                  name: '取り扱い代理店',
+                  items : [
+                    {
+                      name: '掲載待ち'
+                    }
+                  ]
+                }
+              ]
+            each area in areas
+              .item
+                .label !{area.name}
+                .com
+                  each item in area.items
+                    .name
+                      | #{item.name}
+                      if item.link
+                        | (
+                        a(href=`${item.link}`) #{item.link}
+                        |)
+          .section-action
+            a.btn(href="https://docs.google.com/forms/d/e/1FAIpQLSfL6fbrZtQYBAilLmd3_3hg09jNHO99Go57QiLqDIq4UTzecw/viewform") 代理店・パートナー申請はこちら
+        section.section#price
+          h1
+            .section-title 価格
+            .section-subtile PRICE
+          .section-content
+            p 標準システム利用料 未定
+            p
+              | ※ 6/3にリリースしたばかりのため現在、代理店様と調整中です。お急ぎの場合は、代理店もしくは下記お問い合わせからご連絡ください。
+        section.section#contact
+          h1
+            .section-title お問い合わせ
+            .section-subtile CONTACT
+          .section-content
+            .item
+              p 
+                .inline-block 新規イベントは
+                .inline-block こちらから
+              a.btn(href="https://docs.google.com/forms/d/e/1FAIpQLSdJ7PrqnSNebmuIYHPT4oVnj9yf2-OffSLn-cJq-CBaF7ouCQ/viewform") 興行受付窓口
+
+            .item
+              p 
+                .inline-block 発券済みのチケットを利用した
+                .inline-block イベントの代替はこちらから
+              a.btn(href="https://docs.google.com/forms/d/e/1FAIpQLSfi77oEduszQksb-929xGgOxOMDUVqxe1koOyrXURtjw62vcQ/viewform") チケット相談窓口
+            .item
+              p
+                .inline-block イベントスペース利用や
+                .inline-block その他お問い合わせ
+              a.btn(href="https://docs.google.com/forms/d/e/1FAIpQLScviZR3mgeyAO0f7ckb9BgXUBOr2PvfUpmtlTFbOsBS4mN3Sg/viewform") 総合窓口
+        section.section#release
+          h1
+            .section-title お知らせ
+            .section-subtile RELEASE
+          .section-content
+            -
+              var items = [
+                {
+                  date: '2020-06-19',
+                  body: '「SHIBUYA QWS（渋谷キューズ）」(渋谷スクランブルスクエア15F)で開催されたピッチイベント「QWSステージ#2」に登壇いたしました。',
+                  tag: ['イベント・登壇'],
+                  imgs: [
+                    { alt: '', src: '/images/release/2020-06-19-0.png', width: '150px'},
+                    { alt: '', src: '/images/release/2020-06-19-1.png', width: '150px'},
+                    { alt: '', src: '/images/release/2020-06-19-2.png', width: '150px'}
+                  ]
+                },
+                {
+                  date: '2020-06-03',
+                  body: 'オンライン握手会サービス「RE:MEET LIVE」サービス開始のお知らせ',
+                  tag: ['プレスリリース'],
+                  link: 'https://prtimes.jp/main/html/rd/p/000000007.000057781.html'
+                },
+                {
+                  date: '2020-05-31',
+                  body: 'ながさき経済2020年6月号にリミートライブと開発者 柴美津恵が特集されました。',
+                  tag: ['取材'],
+                  link: 'https://nagasaki-keizai.co.jp/archives/7539',
+                  imgs: [
+                    { alt: '', src: '/images/release/2020-06-nagasaki.jpg', width: '100px'}
+                  ]
+                },
+                {
+                  date: '2020-05-31',
+                  body: 'リモートで握手会を再現したWebサービス「Re:Meet LIVE」（リミートライブ）の開発を開始',
+                  tag: ['プレスリリース'],
+                  link: 'https://prtimes.jp/main/html/rd/p/000000001.000057781.html'
+                }
+              ]
+            each item in items
+              .item
+                .date #{item.date}
+                if item.tag
+                  .tags
+                    each tag in item.tag
+                      span.chip #{tag}
+                .body
+                  | #{item.body}
+                  if item.link
+                    a(href=`${item.link}`) #{item.link}
+                if item.imgs
+                  .imgs
+                    each img in item.imgs
+                      img(src=`${img.src}`, alt=`${img.alt}`, style=`width: ${img.width}`)
+        section.section#trailer
+          h1
+            .section-title 製品CM
+            .section-subtile TRAILER
+          .section-content
+            .item
+              iframe(
+                width="360"
+                height="315"
+                src="https://www.youtube.com/embed/Q11_QRloopk"
+                frameborder="0"
+                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+            )
+              p リミートライブ製品トレーラー「逢いたい」編
+        section.section#share
+          h1
+            .section-title シェア
+            .section-subtile SHARE
+          .section-content
+            .item
+              a.btn.tw(href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fremeet.live%2F&text=%E4%BB%8A%E3%80%81%E9%80%A2%E3%81%84%E3%81%AB%E3%81%AB%E8%A1%8C%E3%81%91%E3%82%8B%E3%83%AA%E3%83%9F%E3%83%BC%E3%83%88%E3%83%A9%E3%82%A4%E3%83%96%E3%80%82%E4%BD%93%E9%A8%93%E7%89%88%E3%81%A7%E3%83%AA%E3%83%9F%E3%83%BC%E3%83%88%E3%81%AE%E6%B5%81%E3%82%8C%E3%82%92%E7%A2%BA%E8%AA%8D%EF%BC%81%E6%8E%A8%E3%81%97%E3%81%AB%E9%80%A2%E3%81%86%E6%BA%96%E5%82%99%E3%81%AF%E3%81%A7%E3%81%8D%E3%81%A6%E3%81%BE%E3%81%99%E3%81%8B%EF%BC%9F") Twitter
+            .item
+              a.btn.fb(href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fremeet.live%2F") FACEBOOK
+            .item
+              a.btn.le(href="https://access.line.me/oauth2/v2.1/login?loginState=cGI676avUZDMSUxGG4mceh&loginChannelId=1446101138&returnUri=%2Foauth2%2Fv2.1%2Fauthorize%2Fconsent%3Fscope%3Dopenid%2Bprofile%2Bfriends%2Bgroups%2Btimeline.post%2Bmessage.write%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fsocial-plugins.line.me%252Flineit%252FloginCallback%253FreturnUrl%253Dhttps%25253A%25252F%25252Fsocial-plugins.line.me%25252Flineit%25252Fshare%25253Furl%25253D%252526text%25253D%252525E4%252525BB%2525258A%252525E3%25252580%25252581%252525E9%25252580%252525A2%252525E3%25252581%25252584%252525E3%25252581%252525AB%252525E3%25252581%252525AB%252525E8%252525A1%2525258C%252525E3%25252581%25252591%252525E3%25252582%2525258B%252525E3%25252583%252525AA%252525E3%25252583%2525259F%252525E3%25252583%252525BC%252525E3%25252583%25252588%252525E3%25252583%252525A9%252525E3%25252582%252525A4%252525E3%25252583%25252596%252525E3%25252580%25252582%252525E4%252525BD%25252593%252525E9%252525A8%25252593%252525E7%25252589%25252588%252525E3%25252581%252525A7%252525E3%25252583%252525AA%252525E3%25252583%2525259F%252525E3%25252583%252525BC%252525E3%25252583%25252588%252525E3%25252581%252525AE%252525E6%252525B5%25252581%252525E3%25252582%2525258C%252525E3%25252582%25252592%252525E7%252525A2%252525BA%252525E8%252525AA%2525258D%252525EF%252525BC%25252581%252525E6%2525258E%252525A8%252525E3%25252581%25252597%252525E3%25252581%252525AB%252525E9%25252580%252525A2%252525E3%25252581%25252586%252525E6%252525BA%25252596%252525E5%25252582%25252599%252525E3%25252581%252525AF%252525E3%25252581%252525A7%252525E3%25252581%2525258D%252525E3%25252581%252525A6%252525E3%25252581%252525BE%252525E3%25252581%25252599%252525E3%25252581%2525258B%252525EF%252525BC%2525259F%25252520https%2525253A%2525252F%2525252Fremeet.live%2525252F%252526from%25253Dline_scheme%26state%3D3e57af97980a03b8d567f2e227201b%26client_id%3D1446101138#/") LINE
+      .global-footer
+        .copyright
+          | (c) 2020 リミートライブ.
+          a(href="http://virlent.com") Virlent inc.
+    .container.loading
+      .inner(style="height: 100vh;width: 100%;display: flex;justify-content: center;align-items: center;")
+          svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="shape-rendering: auto;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid")
+            path(d="M14.1,7.5l8.1,0v14.7c0,0.6,0,1.2,0.1,1.7c-0.1-0.6-0.1-1.2-0.1-1.7V7.5c0,0,63.6,0,63.6,0h-8.1 c0,0,0,14.7,0,14.7c0,7-4.6,13.3-11.7,17.1c-4.2,2.3-6.8,5.9-6.8,9.8v1.9c0,3.9,2.5,7.6,6.8,9.8c7.1,3.8,11.7,10,11.7,17.1 c0,0,0,14.7,0,14.7h8.1h-8.1H50h18V82.3c0-3.8-2.6-7.4-7-9.8c-0.1,0-0.1-0.1-0.2-0.1c-6.6-3.6-14.9-3.6-21.5,0 c-0.1,0-0.1,0.1-0.2,0.1c-4.5,2.4-7,6-7,9.8l0,10.2h18c0,0-18,0-18,0H14.1l8.1,0V77.8c0-7,4.6-13.3,11.7-17.1 c4.2-2.3,6.8-5.9,6.8-9.8v-1.9c0-3.9-2.5-7.6-6.8-9.8c-6.5-3.5-10.9-9-11.6-15.3l9.9,0c0.7,3.1,3,5.9,6.8,8c5.7,3,9.5,7.7,10.9,12.9 c1.4-5.2,5.3-9.9,10.9-12.9c3.8-2,6.2-4.8,6.8-8H32.2" fill="none" stroke="#e7e7e7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round")
+            animate(attributeName="stroke-dasharray" keyTimes="0;1" values="480 100;480 110" dur="16.666666666666664s" repeatCount="indefinite")
+            animate(attributeName="stroke-dashoffset" keyTimes="0;1" values="0;-1180" dur="16.666666666666664s" repeatCount="indefinite")
