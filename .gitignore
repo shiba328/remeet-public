@@ -4,3 +4,5 @@ gh-pages-vir.pub
 gh-pages-vir
 _old/*
 .node-version
+id_rsa
+id_rsa.pub
