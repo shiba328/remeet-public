@@ -26,7 +26,7 @@ jobs:
       - name: CNAME
         run: |
           cd dist
-          echo publi.remeet.live > CNAME
+          echo remeet.live > CNAME
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
