@@ -1,0 +1,33 @@
+block vars
+
+.inner
+  .ad
+    ins(
+      class="adsbygoogle"
+      style="display: block; width: 300px; height: 280px; margin: 16px auto;"
+      data-ad-client="ca-pub-7813149050984736"
+      data-ad-slot="3158203273"
+      data-full-width-responsive="true"
+    )
+    script.
+      (adsbygoogle = window.adsbygoogle || []).push({});
+  .sticky-wrap
+    .sticky
+      .index-list
+        .inner.index-list-js
+  .category-list
+    h2.content-title カテゴリ
+    .inner.category-list-js
+  .product-list
+    h2.content-title プロダクト
+    p shiba328が作っている個人開発サービスやツールです。
+    each item in products
+      .inner
+        a(href=item.url)
+          img(
+            src=item.image,
+            alt=item.title,
+            layout="responsive",
+            width="300",
+            height="auto"
+          )

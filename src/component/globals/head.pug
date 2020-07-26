@@ -1,0 +1,85 @@
+include /env.pug
+
+block vars
+  - var page_env = htmlWebpackPlugin.options.env
+  //- if page_env && page_env.path
+  //-   - var md = require(`~/support/${page_env.path}.md`);
+  //-   if md
+  //-     - var attr = md.attributes
+
+doctype html
+html(amp lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width,minimum-scale=1,initial-scale=1")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    if attr
+      title #{`「${attr.title}」| ${env.site.title}`}
+      meta(name="description", content=attr.description)
+      meta(name="twitter:title", content=`「${attr.title}」| ${env.site.title}}`)
+      meta(name="twitter:image", content=`${homeurl}/images/ogp_${attr.name}.png`)
+      meta(name="og:image", content=`${homeurl}/images/ogp_${attr.name}.png`)
+      link(rel="canonical" href=`${homeurl}/${attr.name}`)
+    else
+      title #{env.site.title}
+      meta(name="description", content=env.site.description)
+      meta(name="twitter:title", content=`${env.site.title}`)
+      meta(name="twitter:image", content=`${homeurl}/images/ogp_site.png`)
+      meta(name="og:image", content=`${homeurl}/images/ogp_site.png`)
+      link(rel="canonical" href=`${homeurl}/`)
+    meta(name="og:image:width", content="600")
+    meta(name="og:image:og:height", content="320")
+    meta(content="website", property="og:type")
+    meta(content="ja_JP", property="og:locale")
+    meta(name="twitter:card", content="summary_large_image")
+    meta(name="twitter:site", content=env.site.title)
+    meta(name="twitter:description", content=env.site.description)
+    -
+      var icons = [
+        "more_horiz",
+        "account-circle"
+      ]
+    link(media="screen" disabled ref="custom-icon" href=`https://fonts.googleapis.com/icon?family=Material+Icons&text=${icons.join('')}` rel="stylesheet")
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NX8HB2V');
+    script(async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
+    -
+      function getSearchList(all_mds) {
+        return all_mds.map((v) => {
+          var attr = v.attributes
+          if(!attr) return false
+          var parent = (!attr.parent) ? "" : "/" + attr.parent;
+          var url = `${parent}/${attr.name}/`
+
+          const res = {
+            title: attr.title,
+            url: url,
+            category: attr.category,
+            date: attr.created
+          }
+
+          if(attr && attr.count) {
+            res.count = attr.count;
+          }
+
+          if(attr && attr.excerpt) {
+            res.excerpt = attr.excerpt
+          }
+
+          if(attr && !attr.parent) {
+            res.root = true
+          }
+
+          return res
+        })
+      }
+    script.
+      const SEARCH_LIST = !{JSON.stringify(getSearchList(all_mds))}
+
+  body(class=BODY_CLASS)
+    noscript.
+      iframe(src=env.site.gtm height="0" width="0" style="display:none;visibility:hidden")

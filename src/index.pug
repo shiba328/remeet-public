@@ -1,50 +1,11 @@
-<!DOCTYPE html>
-html(lang="ja", prefix="og: http://ogp.me/ns#")
-  head
-    meta(charset="UTF-8")
-    title Re:MEET LIVE | リモートでミートしてLIVEで応援
-    // Google Tag Manager
-    script.
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','GTM-W2C273R');
-    // End Google Tag Manager
-    meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    meta(name="description", content="密にならずに今、会いに行ける――リモートで握手会を再現したWebサービス「Re:Meet LIVE」（リミートライブ）")
-    meta(property="og:site_name", content="Re:MEET LIVE | リモートでミートしてLIVEで応援")
-    meta(property="og:type", content="website")
-    meta(property="og:url", content="https://remeet.live")
-    meta(property="og:title", content="Re:MEET LIVE | リモートでミートしてLIVEで応援")
-    meta(property="og:description", content="密にならずに今、会いに行ける――リモートで握手会を再現したWebサービス「Re:Meet LIVE」（リミートライブ）")
-    meta(property="og:image", content="https://remeet.live/ogp.png")
-    meta(property="fb:app_id", content="2627859857496859")
-    meta(name="twitter:card", content="summary")
-    meta(name="twitter:site", content="@remeetlive")
-  body
-    // Google Tag Manager (noscript)
-    iframe(src='https://www.googletagmanager.com/ns.html?id=GTM-W2C273R', height='0', width='0', style='display:none;visibility:hidden')
-    // End Google Tag Manager (noscript)
+block vars
+  - var BODY_CLASS = "top"
 
+include /component/globals/head.pug
+  .page-wrap
     .container.main(style="display:none")
       .global-header
-        .branding
-          a(href="/") Re:Meet Live
-        label#menu-btn(for="menu-toggle") :
-        input#menu-toggle(type="checkbox")
-        #menu.sp
-          -
-            var menus = [
-              { href: '#release', label: 'お知らせ'},
-              { href: '#price', label: '価格'},
-              { href: '#playground', label: 'お試し版'},
-              { href: '#partner', label: 'パートナー'},
-              { href: '#contact', label: 'お問い合わせ'},
-              { href: '#share', label: 'シェア'},
-            ]
-          each menu in menus
-            a(href=`${menu.href}`) #{menu.label} 
+        include /component/globals/header.pug
       .global-body
         section.hero
           .section-content

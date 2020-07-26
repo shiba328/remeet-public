@@ -1,0 +1,65 @@
+include /env.pug
+
+block vars
+  - var page_env = htmlWebpackPlugin.options.env
+  if page_env && page_env.path
+    - var md = require(`~/support/${page_env.path}.md`);
+    if md
+      - var attr = md.attributes
+
+- var parent = (!attr.parent) ? "" : "/" + attr.parent;
+doctype html
+html(amp lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width,minimum-scale=1,initial-scale=1")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    if attr
+      title #{`「${attr.title}」| ${env.site.title}`}
+      meta(name="description", content=attr.description)
+      meta(name="twitter:title", content=`「${attr.title}」| ${env.site.title}}`)
+      meta(name="twitter:image", content=`${homeurl}/images/ogp_${attr.name}.png`)
+      meta(name="og:image", content=`${homeurl}/images/ogp_${attr.name}.png`)
+      meta(name="og:url", content=`${homeurl}${parent}/${attr.name}`)
+      meta(name="og:description", content=attr.description)
+      link(rel="canonical" href=`${homeurl}${parent}/${attr.name}/`)
+    else
+      title #{env.site.title}
+      meta(name="description", content=env.site.description)
+      meta(name="twitter:title", content=`${env.site.title}`)
+      meta(name="twitter:image", content=`${homeurl}/images/ogp_site.png`)
+      meta(name="og:image", content=`${homeurl}/images/ogp_site.png`)
+      link(rel="canonical" href=`${homeurl}/`)
+    meta(name="og:image:width", content="600")
+    meta(name="og:image:og:height", content="320")
+    meta(content="website", property="og:type")
+    meta(content="ja_JP", property="og:locale")
+    meta(name="twitter:card", content="summary_large_image")
+    meta(name="twitter:site", content=env.site.title)
+    meta(name="twitter:description", content=env.site.description)
+    -
+      var icons = [
+        "more_horiz",
+        "account-circle"
+      ]
+    link(rel="dns-prefetch" href="https://tpc.googlesyndication.com")
+    link(rel="dns-prefetch" href="https://cdn.ampproject.org")
+    link(rel="stylesheet" href=`https://fonts.googleapis.com/icon?family=Material+Icons&text=${icons.join('')}`)
+    script(async src="https://cdn.ampproject.org/v0.js")
+    script(async custom-element="amp-auto-ads" src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js")
+    script(async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js")
+    script(async custom-element="amp-ad" src="https://cdn.ampproject.org/v0/amp-ad-0.1.js")
+    style(amp-boilerplate).
+      body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}
+    noscript
+      style(amp-boilerplate).
+        body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}
+  body(class=BODY_CLASS)
+    amp-auto-ads(
+      type="adsense"
+      data-ad-client="ca-pub-7813149050984736"
+    )
+    amp-analytics(
+      config="https://www.googletagmanager.com/amp.json?id=GTM-T6R47VR&gtm.url=SOURCE_URL"
+      data-credentials="include"
+    )
