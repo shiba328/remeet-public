@@ -1,6 +1,6 @@
 ---
-name: app-in-browser
-title: アプリ内ブラウザを利用することは可能ですか？
+name: use-operations
+title: 推奨環境の確認
 parent: support
 ---
 
@@ -24,3 +24,12 @@ parent: support
 ※iOS向けChromeブラウザでカメラが起動しない場合があります。 Safariに切り替えてご利用ください。
 
 ※必ず公式サイト（告知ページ）に記載のURLよりアクセスしてください。twitter等のアプリからアクセスした場合、カメラが起動しない場合があります。
+
+# 各アプリで開いた場合の対処方法
+
+- ツイッターアプリから開いた場合
+  画面右下のSafariボタンを押してください
+
+- FACEBOOKアプリから開いた場合
+
+- Microsoft Teamsで開いた場合
