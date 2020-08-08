@@ -10,7 +10,7 @@ parent: support
   - Safari 安定版の最新2バージョン
 - Android
   - Google Chrome 安定版の最新2バージョン
-  - ※ただし、Androidは端末依存により利用できない場合があります。確実に動作させたい場合にはAndroid SDKでの実装を推奨いたします。
+  - ※ただし、Androidは端末依存により利用できない場合があります。
 - PC
   - Google Chrome 安定版の最新2バージョン
   - Firefox 安定版の最新2バージョン
