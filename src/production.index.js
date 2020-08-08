@@ -56,7 +56,7 @@ if(document.body.classList[0] !== 'single-post') {
   icon.disabled = false;
 }
 
-import 'prismjs';
+// import 'prismjs';
 
 // import SearchList from './assets/script/search-list';
 // new SearchList();
