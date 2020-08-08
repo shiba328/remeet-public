@@ -132,8 +132,8 @@ module.exports = (env, argv) => {
           removeStyleLinkTypeAttributes: argv.mode === 'development',
           useShortDoctype: argv.mode === 'development'
         }
-      })),
-      // .concat(new HTMLInlineCSSWebpackPlugin()),
+      }))
+      .concat(new HTMLInlineCSSWebpackPlugin()),
     module: {
       rules: [
         // html
