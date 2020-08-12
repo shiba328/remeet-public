@@ -17,6 +17,44 @@ const path = require('path');
 
 module.exports = (env, argv) => {
 
+  const LpPage = (inputDir, outputDir) => {
+    const templateFiles = fs.readdirSync(path.resolve(__dirname, inputDir));
+    return templateFiles.map(item => {
+      const parts = item.split('.');
+      const name = parts[0];
+      const ext = parts[1];
+      const dirFile = parts[0].split('_');
+      let dir =  "";
+      let file =  "";
+      if(dirFile.length >= 1) {
+        dir = dirFile[0];
+        file = dirFile[1];
+        template = `${inputDir}/${name}.${ext}`;
+        filename = `${dir}/index.html`;
+        console.log(filename)
+      }
+
+      return new HtmlWebPackPlugin({
+        template: template,
+        filename: filename,
+        env: {
+          item: inputDir,
+          name: name,
+          root: `/${outputDir}`, 
+          mode: argv.mode
+        },
+        minify: {
+          collapseWhitespace: argv.mode === 'development',
+          removeComments: argv.mode === 'development',
+          removeRedundantAttributes: argv.mode === 'development',
+          removeScriptTypeAttributes: argv.mode === 'development',
+          removeStyleLinkTypeAttributes: argv.mode === 'development',
+          useShortDoctype: argv.mode === 'development'
+        }
+      });
+    })
+  }
+
   const MyPageLoad = (inputDir, outputDir, layouts, mode) => {
     const templateFiles = fs.readdirSync(path.resolve(__dirname, inputDir));
 
@@ -119,7 +157,7 @@ module.exports = (env, argv) => {
       .concat(MyPageLoad('./src/support', 'support/', './src/layouts/support.pug'))
       // .concat(MyPageLoad('./src/support/svg', 'svg/', './src/layouts/support.pug'))
       // .concat(MyPageLoad('./src/support/webpack-media', 'webpack-media/', './src/layouts/support.pug'))
-      // .concat(DemoPageLoad('./src/page'))
+      .concat(LpPage('./src/lp', 'lp/'))
 
       .concat(new HtmlWebPackPlugin({
         template: path.join(__dirname, 'src/support.pug'),

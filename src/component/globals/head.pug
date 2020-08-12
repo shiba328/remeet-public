@@ -80,6 +80,6 @@ html(amp lang="ja")
     script.
       const SEARCH_LIST = !{JSON.stringify(getSearchList(all_mds))}
 
-  body(class=BODY_CLASS)
+  body(class=`${BODY_CLASS} ${LAYOUT_BODY_CLASS}`)
     noscript.
       iframe(src=env.site.gtm height="0" width="0" style="display:none;visibility:hidden")
