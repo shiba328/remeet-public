@@ -80,20 +80,6 @@ include /component/globals/head-lp.pug
                   ]
                 },
                 {
-                  name: '注意事項',
-                  items : [
-                    {
-                      body: '※イベント参加時には、公式ファンクラブ「PREMIUM M!LK」会員である必要があります。<br>まだ会員ではない方は、「PREMIUM M!LK」にご登録ください。「PREMIUM M!LK」に登録する'
-                    },
-                    {
-                      body: '※必ず、当日お越しになる会員ご本人様のお名前でお申込をお願い致します。'
-                    },
-                    {
-                      body: '※友人、家族を含む第三者への譲渡、および転売は禁止とさせて頂きます。'
-                    }
-                  ]
-                },
-                {
                   name: '参加される前に',
                   items : [
                     {
@@ -109,6 +95,8 @@ include /component/globals/head-lp.pug
                   each item in area.items
                     .body
                       | !{item.body}
+            - var md = require('./a.md')
+              .attention(style="font-size: 80%") !{md.html}
         section.section#artist
           h1
             .section-title
@@ -126,7 +114,7 @@ include /component/globals/head-lp.pug
             -
               var areas = [
                 {
-                  name: '佐野隼人',
+                  name: '佐野勇斗',
                   roma: 'HAYATO SANO',
                   primaryColor: '#E957C4',
                   subColor: '#FFE8F9',
@@ -608,24 +596,24 @@ include /component/globals/head-lp.pug
                             .time
                               span.label 第#{y+1}部
                               span #{item.time}
-        section.section#trailer
-          h1
-            .section-title
-              img(
-                src=`/images/${UKEY}/title-trailer.png`, 
-                srcset=`/images/${UKEY}/title-trailer.png 1x, /images/${UKEY}/title-trailer@2x.png 2x`,
-                alt=""
-              )
-          .section-content
-            .item
-              iframe(
-                width="360"
-                height="315"
-                src="https://www.youtube.com/embed/GOntxVOHY68"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-            )
+        //- section.section#trailer
+        //-   h1
+        //-     .section-title
+        //-       img(
+        //-         src=`/images/${UKEY}/title-trailer.png`, 
+        //-         srcset=`/images/${UKEY}/title-trailer.png 1x, /images/${UKEY}/title-trailer@2x.png 2x`,
+        //-         alt=""
+        //-       )
+        //-   .section-content
+        //-     .item
+        //-       iframe(
+        //-         width="360"
+        //-         height="315"
+        //-         src="https://www.youtube.com/embed/GOntxVOHY68"
+        //-         frameborder="0"
+        //-         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        //-         allowfullscreen
+        //-     )
       .global-footer
         .copyright
           | (c) 2020 

@@ -126,6 +126,7 @@
       }
 
     }
+
   }
   #schedule {
     p {
@@ -212,6 +213,12 @@
             .label {
               width: 30%;
               max-width: 120px;
+            }
+          }
+
+          &:nth-child(even) {
+            .time {
+              padding-left: 50% !important;
             }
           }
         }
