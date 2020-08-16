@@ -1,0 +1,20 @@
+block vars
+
+.layout
+  .branding
+    a(href="/") Re:Meet Live
+  label#menu-btn(for="menu-toggle") :
+  input#menu-toggle(type="checkbox")
+  #menu.sp
+    -
+      var menus = [
+        { href: '#release', label: 'お知らせ'},
+        { href: '#price', label: '価格'},
+        { href: '#playground', label: 'お試し版'},
+        { href: '#partner', label: 'パートナー'},
+        { href: '#contact', label: 'お問い合わせ'},
+        { href: '#share', label: 'シェア'},
+        { href: '/support', label: 'サポート'},
+      ]
+    each menu in menus
+      a(href=`${menu.href}`) #{menu.label} 

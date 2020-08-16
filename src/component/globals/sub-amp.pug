@@ -1,0 +1,28 @@
+block vars
+
+.inner
+  .ad
+    amp-ad(
+      type="adsense"
+      width="300" height="280"
+      data-ad-client="ca-pub-7813149050984736"
+      data-ad-slot="3158203273"
+      data-full-width-responsive="true"
+    )
+  .sticky-wrap
+    .sticky
+      .index-list
+        .inner.index-list-js
+  .product-list
+    h2.content-title プロダクト
+    p shiba328が作っている個人開発サービスやツールです。
+    each item in products
+      .inner
+        a(href=item.url)
+          amp-img(
+            src=item.image,
+            alt=item.title,
+            layout="responsive",
+            width="600",
+            height="314"
+          )

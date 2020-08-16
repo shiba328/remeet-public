@@ -1,0 +1,8 @@
+block vars
+
+.back-top
+  a(href="/") トップに戻る
+  if md.attributes.parent
+    - var parent_md = require(`~/support/${parent}.md`);
+      a(href=`/${md.attributes.parent}/`) #{parent_md.attributes.title}
+  span この記事

@@ -1,0 +1,40 @@
+include /env.pug
+
+block vars
+  - var page_env = htmlWebpackPlugin.options.env
+
+doctype html
+html(amp lang="ja")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width,minimum-scale=1,initial-scale=1")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title #{`${EVENT_NAME}`}
+    meta(name="twitter:title", content=`${EVENT_NAME}`)
+    meta(name="twitter:image", content=`${OGP}`)
+    meta(name="og:image", content=`${OGP}`)
+    link(rel="canonical" href=`${OFFICIAL_LINK}/`)
+    meta(name="og:image:width", content="600")
+    meta(name="og:image:og:height", content="320")
+    meta(content="website", property="og:type")
+    meta(content="ja_JP", property="og:locale")
+    meta(name="twitter:card", content="summary_large_image")
+    meta(name="twitter:site", content=EVENT_NAME)
+    -
+      var icons = [
+        "more_horiz",
+        "account-circle"
+      ]
+    link(media="screen" disabled ref="custom-icon" href=`https://fonts.googleapis.com/icon?family=Material+Icons&text=${icons.join('')}` rel="stylesheet")
+    script.
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-NX8HB2V');
+    script(async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
+    -
+
+  body(class=`${BODY_CLASS} ${LAYOUT_BODY_CLASS}`)
+    noscript.
+      iframe(src=env.site.gtm height="0" width="0" style="display:none;visibility:hidden")

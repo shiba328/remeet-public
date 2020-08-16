@@ -1,0 +1,620 @@
+block vars
+  - var UKEY = "milk"
+  - var BODY_CLASS = UKEY
+  - var LOGONAME = "M!LK"
+  - var OGP = "/images/milk/ogp.png"
+  - var OFFICIAL_LINK = "https://sd-milk.com/"
+  - var FANCLUB_LINK = "https://fc.sd-milk.com/"
+  - var EVENT_TYPE = "オンライントーク会"
+  - var EVENT_MEET = "メンバーと1対1"
+  - var EVENT_NAME = "M!LK Re:Meet L!VE 2020"
+  - var EVENT_NAME_a11y = "ミルク リミートライブ 2020"
+  - var EVENT_DATA = "2020年8月22日（土）、8月23日（日）"
+  - var EVENT_DATA_a11y = "8月22日土曜日と8月23日日曜日に開催"
+ 
+include /component/globals/head-lp.pug
+  .page-wrap
+    .container.main(style="display:none")
+      .global-header
+        .spacer
+        .official
+          a(href=`${OFFICIAL_LINK}`, title=`${LOGONAME}公式サイトに移動`)
+            span 公式サイト
+        .fanclub
+          a(href=`${FANCLUB_LINK}`, title=`${LOGONAME}ファンクラブに移動`)
+            span 公式ファンクラブ
+      .global-body
+        section#hero
+          img.big(
+            src=`/images/${UKEY}/hero.png`
+            srcset=`/images/${UKEY}/hero.png 1x, /images/${UKEY}/hero@2x.png 2x,`
+            alt=""
+          )
+          .section-content
+            img.middle(
+              src=`/images/${UKEY}/main-logo.png`
+              srcset=`/images/${UKEY}/main-logo.png 1x, /images/${UKEY}/main-logo@2x.png 2x,`
+              alt=""
+            )
+            .date
+              img(
+                src=`/images/${UKEY}/data.png`
+                srcset=`/images/${UKEY}/data.png 1x, /images/${UKEY}/data@2x.png 2x,`
+                alt=`${EVENT_DATA_a11y}`
+              )
+            .info
+              p
+                span.inline !{EVENT_DATA}にて、
+                span.inline !{LOGONAME}!{EVENT_MEET}で会える、
+                br
+                span.inline !{EVENT_TYPE}「!{EVENT_NAME}」開催決定！
+              // ここから先は
+              p
+                span.inline メンバー一同、みなさんと逢えることを楽しみにしています。
+        section.section#info
+          h1
+            .section-title
+              img(
+                src=`/images/${UKEY}/title-info.png`, 
+                srcset=`/images/${UKEY}/title-info.png 1x, /images/${UKEY}/title-info@2x.png 2x`,
+                alt=""
+              )
+            .section-subtile イベント詳細
+          .section-content
+            -
+              var areas = [
+                {
+                  name: '日程',
+                  items : [
+                    {
+                      body: `${EVENT_DATA}<br>開催時間は、メンバーにより異なります。<br>メンバーごとのタイムスケジュールをご確認ください。<br><a class="btn" href="#schedule">タイムスケジュールを確認する</a>`
+                    }
+                  ]
+                },
+                {
+                  name: '参加方法',
+                  items : [
+                    {
+                      body: '「参加URL」と「チケット番号」をメール配信にてお知らせいたします。',
+                    }
+                  ]
+                },
+                {
+                  name: '参加される前に',
+                  items : [
+                    {
+                      body: '本サービス「リミートライブ」の流れを確認するために体験版をご利用ください。<div class="btn-wrap"><a class="btn" href="https://example.com">事前にリミートライブを試してみる</a></div>※体験版は、1on1の接続を保証するものではありません。必ず「推奨環境」をご確認ください。'
+                    }
+                  ]
+                }
+              ]
+            each area in areas
+              .item
+                .label !{area.name}
+                .com
+                  each item in area.items
+                    .body
+                      | !{item.body}
+            - var md = require('./a.md')
+              .attention(style="font-size: 80%") !{md.html}
+        section.section#artist
+          h1
+            .section-title
+              img(
+                src=`/images/${UKEY}/title-artist.png`, 
+                srcset=`/images/${UKEY}/title-artist.png 1x, /images/${UKEY}/title-artist@2x.png 2x`,alt=""
+              )
+            .section-subtile 
+          .section-content
+            -
+              var data = [
+                '8月22日(土)',
+                '8月23日(日)'
+              ]
+            -
+              var areas = [
+                {
+                  name: '佐野勇斗',
+                  roma: 'HAYATO SANO',
+                  primaryColor: '#E957C4',
+                  subColor: '#FFE8F9',
+                  src: '/images/milk/sano.png',
+                  stage: [
+                    [
+                      {
+                        time: '11:00 - 11:30'
+                      },
+                      {
+                        time: '11:45 - 12:15'
+                      },
+                      {
+                        time: '12:30 - 13:00'
+                      },
+                      {
+                        time: '13:15 - 13:45'
+                      },
+                      {
+                        time: '14:00 - 14:30'
+                      },
+                      {
+                        time: '15:00 - 15:30'
+                      },
+                      {
+                        time: '15:45 - 16:15'
+                      },
+                      {
+                        time: '16:30 - 17:00'
+                      },
+                      {
+                        time: '17:15 - 17:45'
+                      },
+                      {
+                        time: '18:00 - 18:30'
+                      },
+                      {
+                        time: '18:45 - 19:15'
+                      },
+                      {
+                        time: '19:30 - 20:00'
+                      }
+                    ],
+                    [
+                      {
+                        time: '11:00 - 11:30'
+                      },
+                      {
+                        time: '11:45 - 12:15'
+                      },
+                      {
+                        time: '12:30 - 13:00'
+                      },
+                      {
+                        time: '13:15 - 13:45'
+                      },
+                      {
+                        time: '14:00 - 14:30'
+                      },
+                      {
+                        time: '15:00 - 15:30'
+                      },
+                      {
+                        time: '15:45 - 16:15'
+                      },
+                      {
+                        time: '16:30 - 17:00'
+                      },
+                      {
+                        time: '17:15 - 17:45'
+                      },
+                      {
+                        time: '18:00 - 18:30'
+                      },
+                      {
+                        time: '18:45 - 19:15'
+                      },
+                      {
+                        time: '19:30 - 20:00'
+                      }
+                    ],
+                  ]
+                },
+                {
+                  name: '塩﨑太智',
+                  roma: 'DAICHI SHIOZAKI',
+                  primaryColor: '#316EF3',
+                  subColor: '#FFE8F9',
+                  src: '/images/milk/shiozaki.png',
+                  stage: [
+                    [
+                      {
+                        time: '11:00 - 11:30'
+                      },
+                      {
+                        time: '11:45 - 12:15'
+                      },
+                      {
+                        time: '12:30 - 13:00'
+                      },
+                      {
+                        time: '13:15 - 13:45'
+                      },
+                      {
+                        time: '14:00 - 14:30'
+                      },
+                      {
+                        time: '15:00 - 15:30'
+                      },
+                      {
+                        time: '15:45 - 16:15'
+                      },
+                      {
+                        time: '16:30 - 17:00'
+                      },
+                      {
+                        time: '17:15 - 17:45'
+                      },
+                      {
+                        time: '18:00 - 18:30'
+                      },
+                      {
+                        time: '18:45 - 19:15'
+                      },
+                      {
+                        time: '19:30 - 20:00'
+                      }
+                    ],
+                    [
+                      {
+                        time: '11:00 - 11:30'
+                      },
+                      {
+                        time: '11:45 - 12:15'
+                      },
+                      {
+                        time: '12:30 - 13:00'
+                      },
+                      {
+                        time: '13:15 - 13:45'
+                      },
+                      {
+                        time: '14:00 - 14:30'
+                      },
+                      {
+                        time: '15:00 - 15:30'
+                      },
+                      {
+                        time: '15:45 - 16:15'
+                      },
+                      {
+                        time: '16:30 - 17:00'
+                      },
+                      {
+                        time: '17:15 - 17:45'
+                      },
+                      {
+                        time: '18:00 - 18:30'
+                      },
+                      {
+                        time: '18:45 - 19:15'
+                      },
+                      {
+                        time: '19:30 - 20:00'
+                      }
+                    ],
+                  ]
+                },
+                {
+                  name: '曽野舜太',
+                  roma: 'SHUNTA SONO',
+                  primaryColor: '#EB3323',
+                  subColor: '#FFE8F9',
+                  src: '/images/milk/sono.png',
+                  stage: [
+                    [
+                      {
+                        time: '休止'
+                      },
+                      {
+                        time: '休止'
+                      },
+                      {
+                        time: '休止'
+                      },
+                      {
+                        time: '休止'
+                      },
+                      {
+                        time: '14:00 - 14:30'
+                      },
+                      {
+                        time: '15:00 - 15:30'
+                      },
+                      {
+                        time: '15:45 - 16:15'
+                      },
+                      {
+                        time: '16:30 - 17:00'
+                      },
+                      {
+                        time: '17:15 - 17:45'
+                      },
+                      {
+                        time: '18:00 - 18:30'
+                      },
+                      {
+                        time: '18:45 - 19:15'
+                      },
+                      {
+                        time: '19:30 - 20:00'
+                      }
+                    ],
+                    [
+                      {
+                        time: '休止'
+                      },
+                      {
+                        time: '休止'
+                      },
+                      {
+                        time: '休止'
+                      },
+                      {
+                        time: '休止'
+                      },
+                      {
+                        time: '14:00 - 14:30'
+                      },
+                      {
+                        time: '15:00 - 15:30'
+                      },
+                      {
+                        time: '15:45 - 16:15'
+                      },
+                      {
+                        time: '16:30 - 17:00'
+                      },
+                      {
+                        time: '17:15 - 17:45'
+                      },
+                      {
+                        time: '18:00 - 18:30'
+                      },
+                      {
+                        time: '18:45 - 19:15'
+                      },
+                      {
+                        time: '19:30 - 20:00'
+                      }
+                    ],
+                  ]
+                },
+                {
+                  name: '山中柔太朗',
+                  roma: 'JYUTARO YAMANAKA',
+                  primaryColor: '#c5c5c5',
+                  subColor: '#FFE8F9',
+                  src: '/images/milk/yamanaka.png',
+                  stage: [
+                    [
+                      {
+                        time: '11:00 - 11:30'
+                      },
+                      {
+                        time: '11:45 - 12:15'
+                      },
+                      {
+                        time: '12:30 - 13:00'
+                      },
+                      {
+                        time: '13:15 - 13:45'
+                      },
+                      {
+                        time: '14:00 - 14:30'
+                      },
+                      {
+                        time: '15:00 - 15:30'
+                      },
+                      {
+                        time: '15:45 - 16:15'
+                      },
+                      {
+                        time: '16:30 - 17:00'
+                      },
+                      {
+                        time: '17:15 - 17:45'
+                      },
+                      {
+                        time: '18:00 - 18:30'
+                      }
+                    ],
+                    [
+                      {
+                        time: '11:00 - 11:30'
+                      },
+                      {
+                        time: '11:45 - 12:15'
+                      },
+                      {
+                        time: '12:30 - 13:00'
+                      },
+                      {
+                        time: '13:15 - 13:45'
+                      },
+                      {
+                        time: '14:00 - 14:30'
+                      },
+                      {
+                        time: '15:00 - 15:30'
+                      },
+                      {
+                        time: '15:45 - 16:15'
+                      },
+                      {
+                        time: '16:30 - 17:00'
+                      },
+                      {
+                        time: '17:15 - 17:45'
+                      },
+                      {
+                        time: '18:00 - 18:30'
+                      }
+                    ],
+                  ]
+                },
+                {
+                  name: '吉田仁人',
+                  roma: 'JINTO YOSHIDA',
+                  primaryColor: '#F6CC53',
+                  subColor: '#FFE8F9',
+                  src: '/images/milk/yoshida.png',
+                  stage: [
+                    [
+                      {
+                        time: '11:00 - 11:30'
+                      },
+                      {
+                        time: '11:45 - 12:15'
+                      },
+                      {
+                        time: '12:30 - 13:00'
+                      },
+                      {
+                        time: '13:15 - 13:45'
+                      },
+                      {
+                        time: '14:00 - 14:30'
+                      },
+                      {
+                        time: '15:00 - 15:30'
+                      },
+                      {
+                        time: '15:45 - 16:15'
+                      },
+                      {
+                        time: '16:30 - 17:00'
+                      },
+                      {
+                        time: '17:15 - 17:45'
+                      },
+                      {
+                        time: '18:00 - 18:30'
+                      }
+                    ],
+                    [
+                      {
+                        time: '11:00 - 11:30'
+                      },
+                      {
+                        time: '11:45 - 12:15'
+                      },
+                      {
+                        time: '12:30 - 13:00'
+                      },
+                      {
+                        time: '13:15 - 13:45'
+                      },
+                      {
+                        time: '14:00 - 14:30'
+                      },
+                      {
+                        time: '15:00 - 15:30'
+                      },
+                      {
+                        time: '15:45 - 16:15'
+                      },
+                      {
+                        time: '16:30 - 17:00'
+                      },
+                      {
+                        time: '17:15 - 17:45'
+                      },
+                      {
+                        time: '18:00 - 18:30'
+                      }
+                    ],
+                  ]
+                }
+              ]
+            each area, i in areas
+              .item(
+                class=`artist${i}`
+              )
+                img(src=area.src, alt=`${area.name}`)
+                .name !{area.name}
+                .roma(style=`color:${area.primaryColor}`) !{area.roma}
+        section.section#schedule
+          h1
+            .section-title
+              img(
+                src=`/images/${UKEY}/title-schedule.png`, 
+                srcset=`/images/${UKEY}/title-schedule.png 1x, /images/${UKEY}/title-schedule@2x.png 2x`,
+                alt=""
+              )
+            .section-subtile
+          .section-content
+            p
+              span.inline-block メンバーにより、リミートの開催時間が異なります。
+              br
+              span.inline-block 複数メンバーのチケットをお持ちの方は、
+              span.inline-block 参加時間が別の時間になるよう確認してください。
+            .scheduler
+              each area, j in areas
+                if j == 0
+                  input(
+                    id=`artist${j}`
+                    type="radio"
+                    name="schedule"
+                    checked
+                  )
+                else
+                  input(
+                    id=`artist${j}`
+                    type="radio"
+                    name="schedule"
+                  )
+              .head
+                each area, i in areas
+                  label(
+                    for=`artist${i}`
+                    class=`artist${i}-label`
+                    style=`background:${area.primaryColor}`
+                  )
+                    span !{area.name}
+              .body
+                each area, j in areas
+                  .schedule(
+                    id=`artist${j}-wrap`
+                    style=`border-color:${area.primaryColor}`
+                  )
+                    - for (n = 0; n < 2; n++)
+                      if n == 0
+                        input(
+                          id=`artist${j}day${n}`
+                          type="radio"
+                          name=`artist${j}day`
+                          checked
+                        )
+                      else
+                        input(
+                          id=`artist${j}day${n}`
+                          type="radio"
+                          name=`artist${j}day`
+                        )
+                    .head
+                      - for (n = 0; n < 2; n++)
+                          label(
+                            class=`artist${j}day${n}-label`
+                            for=`artist${j}day${n}`
+                            name=`artist${j}day`
+                          ) DAY#{n+1} #{data[n]}
+                    .body
+                      - for (n = 0; n < 2; n++)
+                        .day(
+                          id=`artist${j}day${n}-wrap`
+                        )
+                          each item, y in area.stage[n]
+                            .time
+                              span.label 第#{y+1}部
+                              span #{item.time}
+        //- section.section#trailer
+        //-   h1
+        //-     .section-title
+        //-       img(
+        //-         src=`/images/${UKEY}/title-trailer.png`, 
+        //-         srcset=`/images/${UKEY}/title-trailer.png 1x, /images/${UKEY}/title-trailer@2x.png 2x`,
+        //-         alt=""
+        //-       )
+        //-   .section-content
+        //-     .item
+        //-       iframe(
+        //-         width="360"
+        //-         height="315"
+        //-         src="https://www.youtube.com/embed/GOntxVOHY68"
+        //-         frameborder="0"
+        //-         allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+        //-         allowfullscreen
+        //-     )
+      .global-footer
+        .copyright
+          | (c) 2020 
+          a(href=`${OFFICIAL_LINK}`) #{LOGONAME}

@@ -1,0 +1,30 @@
+block vars
+
+-
+  function replaceAmp(str) {
+    const re = str.replace(/img/g, 'amp-img layout="intrinsic"')
+    return re
+  }
+
+.title !{attr.title}
+.content
+  | !{replaceAmp(md.html)}
+  block contentAfter
+.categories
+  a #{attr.category}
+if attr.tags
+  .tags
+    each tag in attr.tags
+      span.tag #{tag}
+//- if page_env.mode == "development"
+//-   .thumbnail
+//-     svg.thumbnail-svg(viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" width="600" height="320")
+//-       rect(width="600" height="320" fill="url(#Gradient01)")
+//-       rect(x=10 y=10 width="580" height="300" fill="#fff")
+//-       circle(r=100 fill="#13b7a5")
+//-       circle(r=100 cy=320 cx=600 fill="#f362a4")
+//-       linearGradient#Gradient01
+//-         stop(offset="0%" stop-color="#13b7a5")
+//-         stop(offset="50%" stop-color="#7a85c5")
+//-         stop(offset="100%" stop-color="#f362a4")
+//-     button.save-btn OGP

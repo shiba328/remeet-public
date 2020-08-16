@@ -1,0 +1,15 @@
+block vars
+  - var BODY_CLASS = "single-post"
+
+  include /component/globals/head.pug
+  .page-wrap
+    .container
+      .global-header
+        include /component/globals/header.pug
+      .global-body
+        .main
+          include /component/single.pug
+      .global-footer
+        .copyright
+          | (c) 2020 リミートライブ.
+          a(href="http://virlent.com") Virlent inc.

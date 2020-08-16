@@ -6,3 +6,4 @@ _old/*
 .node-version
 id_rsa
 id_rsa.pub
+dist

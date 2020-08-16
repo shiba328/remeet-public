@@ -1,0 +1,15 @@
+block vars
+  - var BODY_CLASS = "support"
+
+include /component/globals/head.pug
+  .page-wrap
+    .container.main(style="display:none")
+      .global-header
+        include /component/globals/header.pug
+      .global-body
+        .section-content
+          include /component/support-all.pug
+      .global-footer
+    .container.loading
+      .inner(style="height: 100vh;width: 100%;display: flex;justify-content: center;align-items: center;")
+          svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="shape-rendering: auto;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid")

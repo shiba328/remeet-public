@@ -1,0 +1,25 @@
+include /env.pug
+
+-
+  function getList(all_mds) {
+    return all_mds.map((v) => {
+      var attr = v.attributes
+      if(!attr) return false
+      var parent = (!attr.parent) ? "" : "/" + attr.parent;
+      var url = `${parent}/${attr.name}/`
+
+      const res = {
+        loc: url,
+        lastmod: attr.updated == "" ? attr.updated : attr.created
+      }
+
+      return res
+    })
+  }
+
+<?xml version="1.0" encoding="UTF-8"?>
+urlset(xmlns="http://www.sitemaps.org/schemas/sitemap/0.9")
+  each i in getList(all_mds)
+    url
+      loc https://js.akirumade.com#{i.loc}
+      lastmod #{i.lastmod}
