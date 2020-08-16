@@ -157,7 +157,7 @@ module.exports = (env, argv) => {
       .concat(MyPageLoad('./src/support', 'support/', './src/layouts/support.pug'))
       // .concat(MyPageLoad('./src/support/svg', 'svg/', './src/layouts/support.pug'))
       // .concat(MyPageLoad('./src/support/webpack-media', 'webpack-media/', './src/layouts/support.pug'))
-      .concat(LpPage('./src/lp', 'lp/'))
+      // .concat(LpPage('./src/lp', 'lp/'))
 
       .concat(new HtmlWebPackPlugin({
         template: path.join(__dirname, 'src/support.pug'),
