@@ -78,7 +78,9 @@
       padding: 10px 30px;
 
       .item {
-        display: flex;
+        @media (--lg) {
+          display: flex;
+        }
         border-top: 1px solid #000;
         padding: 20px 0;
 
@@ -87,6 +89,7 @@
         }
 
         .label {
+          font-weight: bold;
           flex: 0 0 150px;
         }
       }
@@ -215,10 +218,11 @@
               max-width: 120px;
             }
           }
-
-          &:nth-child(even) {
-            .time {
-              padding-left: 50% !important;
+          @media (--md) {
+            &:nth-child(even) {
+              .time {
+                padding-left: 50% !important;
+              }
             }
           }
         }

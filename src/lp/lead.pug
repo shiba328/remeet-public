@@ -1,0 +1,89 @@
+block vars
+  - var UKEY = "lead"
+  - var BODY_CLASS = UKEY
+  - var LOGONAME = "Lead"
+  - var OGP = "/ogp.png"
+  - var OFFICIAL_LINK = "http://lead.tv/"
+  - var FANCLUB_LINK = "https://lead-fc.jp/"
+  - var EVENT_TYPE = "オンライントーク会"
+  - var EVENT_MEET = "メンバーと1対1"
+  - var EVENT_NAME = "M!LK Re:Meet L!VE 2020"
+  - var EVENT_NAME_a11y = "ミルク リミートライブ 2020"
+  - var EVENT_DATA = "2020年8月22日（土）、8月23日（日）"
+  - var EVENT_DATA_a11y = "オンラインイベントを8月22日土曜日と8月23日日曜日に開催"
+
+include /component/globals/head-lp.pug
+  .page-wrap
+    .container.main(style="display:none")
+      .global-header
+        .spacer
+        .official
+          a(href=`${OFFICIAL_LINK}`, title=`${LOGONAME}公式サイトに移動`)
+            span 公式サイト
+        .fanclub
+          a(href=`${FANCLUB_LINK}`, title=`${LOGONAME}ファンクラブに移動`)
+            span 公式ファンクラブ
+      .global-body
+        section#hero
+          img.big(
+            src=`/images/${UKEY}/hero.png`
+            srcset=`/images/${UKEY}/hero.png 1x, /images/${UKEY}/hero@2x.png 2x,`
+            alt=""
+          )
+        section.section#login
+          .section-content
+            form(action="")
+              .input-wrap.row
+                label ファンクラブID
+                input(
+                  type="text"
+                  maxlength="8"
+                  placeholder="例：8qu403"
+                )
+              .input-wrap.row
+                label メールアドレス
+                input(
+                  type="mail"
+                  maxlength="8"
+                  placeholder="例：example＠example.com"
+                )
+          .section-action
+            .btn
+              a(href="") シリアルを入力する
+        section.section#serial
+          .section-content
+            - var tabs = [3, 12]
+            - for (n = 0; n < 2; n++)
+              if n == 0
+                input(
+                  id=`serial${n}`
+                  type="radio"
+                  name=`serial`
+                  checked
+                )
+              else
+                input(
+                  id=`serial${n}`
+                  type="radio"
+                  name=`serial`
+                )
+            .head
+              - for (n = 0; n < 2; n++)
+                label(
+                  class=`serial${n}-label`
+                  for=`serial${n}`
+                ) #{tabs[n]}コード
+            .body
+              - for (n = 0; n < 2; n++) 
+                .serial(class=`serial${n}-wrap`)
+                  form(action="")
+                    - for (i = 0; i < tabs[n]; i++)
+                      .input-wrap
+                        label #{i + 1}
+                        input(type="text" maxlength="8" placeholder="例：gasjkfa")
+                    .btn
+                      a(href="") #{tabs[n]}コードを送信する
+      .global-footer
+        .copyright
+          | (c) 2020 
+          a(href=`${OFFICIAL_LINK}`) #{LOGONAME}
