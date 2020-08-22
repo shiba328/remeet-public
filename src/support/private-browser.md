@@ -1,6 +1,6 @@
 ---
 name: private-browser
-title: プライベートブラウザでアクセス
+title: 待機人数が動かない場合の対処方法
 parent: support
 ---
 

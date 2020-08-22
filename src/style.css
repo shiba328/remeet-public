@@ -447,3 +447,11 @@ img {
   }
 }
 
+.post-list-item {
+  margin-bottom: 0.5em;
+
+  &:after {
+    border-bottom: 1px solid #eee;
+  }
+}
+
