@@ -17,7 +17,7 @@ include /component/globals/head.pug
                 span.inline-block ファンミーティングをオンライン化。
                 span.inline-block 握手会・サイン会の代替販促会専用システム
               p
-                | 「リミートライブ」は、コロナ渦において、コンサートや握手会といった集客を伴うイベントの開催ができなくなってしまったタレントさまと、「推し」に逢えなくなってしまったファンとを繋ぐ、密にならずに逢いに行けるWebサービスです。「リミートしよう！」を合言葉に是非ご活用ください。
+                | 「リミートライブ」は、コロナ禍において、コンサートや握手会といった集客を伴うイベントの開催ができなくなってしまったタレントさまと、「推し」に逢えなくなってしまったファンとを繋ぐ、密にならずに逢いに行けるWebサービスです。「リミートしよう！」を合言葉に是非ご活用ください。
               .sns
                 a(href="https://twitter.com/remeetlive") 公式ツイッター
                 a(href="https://www.facebook.com/remeetlive") 公式FACEBOOKページ
@@ -210,9 +210,7 @@ include /component/globals/head.pug
             .item
               a.btn.le(href="https://access.line.me/oauth2/v2.1/login?loginState=cGI676avUZDMSUxGG4mceh&loginChannelId=1446101138&returnUri=%2Foauth2%2Fv2.1%2Fauthorize%2Fconsent%3Fscope%3Dopenid%2Bprofile%2Bfriends%2Bgroups%2Btimeline.post%2Bmessage.write%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fsocial-plugins.line.me%252Flineit%252FloginCallback%253FreturnUrl%253Dhttps%25253A%25252F%25252Fsocial-plugins.line.me%25252Flineit%25252Fshare%25253Furl%25253D%252526text%25253D%252525E4%252525BB%2525258A%252525E3%25252580%25252581%252525E9%25252580%252525A2%252525E3%25252581%25252584%252525E3%25252581%252525AB%252525E3%25252581%252525AB%252525E8%252525A1%2525258C%252525E3%25252581%25252591%252525E3%25252582%2525258B%252525E3%25252583%252525AA%252525E3%25252583%2525259F%252525E3%25252583%252525BC%252525E3%25252583%25252588%252525E3%25252583%252525A9%252525E3%25252582%252525A4%252525E3%25252583%25252596%252525E3%25252580%25252582%252525E4%252525BD%25252593%252525E9%252525A8%25252593%252525E7%25252589%25252588%252525E3%25252581%252525A7%252525E3%25252583%252525AA%252525E3%25252583%2525259F%252525E3%25252583%252525BC%252525E3%25252583%25252588%252525E3%25252581%252525AE%252525E6%252525B5%25252581%252525E3%25252582%2525258C%252525E3%25252582%25252592%252525E7%252525A2%252525BA%252525E8%252525AA%2525258D%252525EF%252525BC%25252581%252525E6%2525258E%252525A8%252525E3%25252581%25252597%252525E3%25252581%252525AB%252525E9%25252580%252525A2%252525E3%25252581%25252586%252525E6%252525BA%25252596%252525E5%25252582%25252599%252525E3%25252581%252525AF%252525E3%25252581%252525A7%252525E3%25252581%2525258D%252525E3%25252581%252525A6%252525E3%25252581%252525BE%252525E3%25252581%25252599%252525E3%25252581%2525258B%252525EF%252525BC%2525259F%25252520https%2525253A%2525252F%2525252Fremeet.live%2525252F%252526from%25253Dline_scheme%26state%3D3e57af97980a03b8d567f2e227201b%26client_id%3D1446101138#/") LINE
       .global-footer
-        .copyright
-          | (c) 2020 リミートライブ.
-          a(href="http://virlent.com") Virlent inc.
+        include /component/globals/footer.pug
     .container.loading
       .inner(style="height: 100vh;width: 100%;display: flex;justify-content: center;align-items: center;")
           svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="shape-rendering: auto;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid")
