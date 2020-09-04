@@ -5,11 +5,50 @@ include /component/globals/head.pug
   .page-wrap
     .container.main(style="display:none")
       .global-header
-        include /component/globals/header.pug
+        .layout
+          .branding
+            a(href="/") Re:Meet Live
       .global-body
         .section-content
           include /component/support-all.pug
+          .contact-us
+            div 当日のお問い合わせに関しましては、下記アドレスにメールをお送りください。
+            #test(style="display:none") test
+            #z17NOQS2(style="display:none")
+              div  milk_support@chara-ani.com
+              div （8/22～8/23　10：00～19：00）
       .global-footer
+        include /component/globals/footer.pug
     .container.loading
       .inner(style="height: 100vh;width: 100%;display: flex;justify-content: center;align-items: center;")
           svg(xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="shape-rendering: auto;" width="100px" height="100px" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid")
+  style.
+    .contact-us {
+      margin-top: 2em;
+      text-align: center;
+    }
+  script.
+    const q = getUrlQueries()
+    if(q.eventId) {
+      const target = document.getElementById(q.eventId)
+      console.log(q.eventId, target)
+      target.style.display = "block"
+    }
+    function getUrlQueries() {
+      var queryStr = window.location.search.slice(1);  // 文頭?を除外
+          queries = {};
+
+      // クエリがない場合は空のオブジェクトを返す
+      if (!queryStr) {
+        return queries;
+      }
+
+      // クエリ文字列を & で分割して処理
+      queryStr.split('&').forEach(function(queryStr) {
+        // = で分割してkey,valueをオブジェクトに格納
+        var queryArr = queryStr.split('=');
+        queries[queryArr[0]] = queryArr[1];
+      });
+
+      return queries;
+    }
