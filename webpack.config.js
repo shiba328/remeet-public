@@ -137,6 +137,10 @@ module.exports = (env, argv) => {
           useShortDoctype: argv.mode === 'development'
         }
       }),
+      new HtmlWebPackPlugin({
+        template: path.join(__dirname, 'src/brand.pug'),
+        filename: 'brand/index.html'
+      }),
       // new GenerateSW(),
       new MiniCssExtractPlugin({
         // filename: "assets/css/style.css"
