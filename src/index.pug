@@ -1,6 +1,193 @@
 block vars
   - var BODY_CLASS = "top"
-
+  -
+    var HEAD_LINE = [
+      "密にならずに逢いにいける",
+      "ファンミーティングをオンライン化。",
+      "握手会・サイン会の代替販促会専用システム"
+    ]
+  -
+    var MAIN_COPY = "「リミートライブ」は、コロナ禍において、コンサートや握手会といった集客を伴うイベントの開催ができなくなってしまったタレントさまと、「推し」に逢えなくなってしまったファンとを繋ぐ、密にならずに逢いに行けるWebサービスです。オンライントーク会、オンラインサイン会、オンライン2ショット用の専用機能を利用して「リミートしよう！」を合言葉に是非ご活用ください。"
+  -
+    var SNS = [
+      {
+        key: "tw",
+        label: "公式ツイッター",
+        url: "https://twitter.com/remeetlive",
+        shareLabel: 'Twitter',
+        share: "https://twitter.com/intent/tweet?url=https%3A%2F%2Fremeet.live%2F&text=%E4%BB%8A%E3%80%81%E9%80%A2%E3%81%84%E3%81%AB%E3%81%AB%E8%A1%8C%E3%81%91%E3%82%8B%E3%83%AA%E3%83%9F%E3%83%BC%E3%83%88%E3%83%A9%E3%82%A4%E3%83%96%E3%80%82%E4%BD%93%E9%A8%93%E7%89%88%E3%81%A7%E3%83%AA%E3%83%9F%E3%83%BC%E3%83%88%E3%81%AE%E6%B5%81%E3%82%8C%E3%82%92%E7%A2%BA%E8%AA%8D%EF%BC%81%E6%8E%A8%E3%81%97%E3%81%AB%E9%80%A2%E3%81%86%E6%BA%96%E5%82%99%E3%81%AF%E3%81%A7%E3%81%8D%E3%81%A6%E3%81%BE%E3%81%99%E3%81%8B%EF%BC%9F"
+      },
+      {
+        key: "fb",
+        label: "公式FACEBOOKページ",
+        shareLabel: 'FACEBOOK',
+        url: "https://www.facebook.com/remeetlive",
+        share: "https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fremeet.live%2F"
+      },
+      {
+        key: "yo",
+        label: "公式YOUTUBE",
+        url: "https://www.youtube.com/channel/UCruXABY_sqMuDZjW4H5-DKQ"
+      },
+      {
+        key: 'le',
+        shareLabel: 'LINE',
+        share: "https://access.line.me/oauth2/v2.1/login?loginState=cGI676avUZDMSUxGG4mceh&loginChannelId=1446101138&returnUri=%2Foauth2%2Fv2.1%2Fauthorize%2Fconsent%3Fscope%3Dopenid%2Bprofile%2Bfriends%2Bgroups%2Btimeline.post%2Bmessage.write%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fsocial-plugins.line.me%252Flineit%252FloginCallback%253FreturnUrl%253Dhttps%25253A%25252F%25252Fsocial-plugins.line.me%25252Flineit%25252Fshare%25253Furl%25253D%252526text%25253D%252525E4%252525BB%2525258A%252525E3%25252580%25252581%252525E9%25252580%252525A2%252525E3%25252581%25252584%252525E3%25252581%252525AB%252525E3%25252581%252525AB%252525E8%252525A1%2525258C%252525E3%25252581%25252591%252525E3%25252582%2525258B%252525E3%25252583%252525AA%252525E3%25252583%2525259F%252525E3%25252583%252525BC%252525E3%25252583%25252588%252525E3%25252583%252525A9%252525E3%25252582%252525A4%252525E3%25252583%25252596%252525E3%25252580%25252582%252525E4%252525BD%25252593%252525E9%252525A8%25252593%252525E7%25252589%25252588%252525E3%25252581%252525A7%252525E3%25252583%252525AA%252525E3%25252583%2525259F%252525E3%25252583%252525BC%252525E3%25252583%25252588%252525E3%25252581%252525AE%252525E6%252525B5%25252581%252525E3%25252582%2525258C%252525E3%25252582%25252592%252525E7%252525A2%252525BA%252525E8%252525AA%2525258D%252525EF%252525BC%25252581%252525E6%2525258E%252525A8%252525E3%25252581%25252597%252525E3%25252581%252525AB%252525E9%25252580%252525A2%252525E3%25252581%25252586%252525E6%252525BA%25252596%252525E5%25252582%25252599%252525E3%25252581%252525AF%252525E3%25252581%252525A7%252525E3%25252581%2525258D%252525E3%25252581%252525A6%252525E3%25252581%252525BE%252525E3%25252581%25252599%252525E3%25252581%2525258B%252525EF%252525BC%2525259F%25252520https%2525253A%2525252F%2525252Fremeet.live%2525252F%252526from%25253Dline_scheme%26state%3D3e57af97980a03b8d567f2e227201b%26client_id%3D1446101138#/"
+      }
+    ]
+  -
+    var RESULTS = [
+      {
+        date: '2020-09-13',
+        company: '川崎フロンターレ',
+        description: '2回目のリミートをご利用いただきました。前回は前日に設営とリハをオペレーター派遣致しましたが、2回目はクラブスタッフの方のみ対応',
+        place: '等々力競技場',
+        part: 1,
+        talentinfo: '2名',
+        talent: 2,
+        fun: 120,
+        tickets: 120,
+        optionsUse: ['プレグラ', 'デコショット', '遠隔監視', 'シリアルチケット入場'],
+        partner: '株式会社 三桂'
+      },
+      {
+        date: '2020-09-12',
+        company: '名前未公開',
+        description: 'CD発売記念のイベントとして、1on1のリミートをお話会、加えて2ショット写真が取れるデコショットご利用いただきました。',
+        place: '都内某所',
+        part: 7,
+        talentinfo: '1名',
+        talent: 5,
+        fun: 210,
+        tickets: 210,
+        optionsUse: ['プレグラ', 'デコショット', 'オペレーター派遣', 'シリアルチケット入場'],
+        partner: '株式会社 クオラス'
+      },
+      {
+        date: '2020-08-22',
+        company: '名前未公開',
+        description: 'CD発売記念のイベント(東阪名3拠点)の代替として、1on1のリミートをトーク会としてご利用いただきました。',
+        place: '都内某所4名/名古屋某所1名',
+        part: 12,
+        talentinfo: '遠隔5名',
+        talent: 5,
+        fun: 2500,
+        tickets: 6000,
+        optionsUse: ['プレグラ', 'オペレーター派遣', 'シリアルチケット入場'],
+        partner: '株式会社 クオラス'
+      },
+      {
+        date: '2020-08-08',
+        company: '川崎フロンターレ',
+        description: '普段、ホームゲームで行っているファンサービス(握手会・サイン会)の代用として、1on1のリミートに加え、2ショット写真が取れるデコショットをご利用いただきました。',
+        place: '等々力競技場',
+        part: 1,
+        talentinfo: '2名',
+        talent: 2,
+        fun: 120,
+        tickets: 120,
+        optionsUse: ['プレグラ', 'デコショット', '遠隔監視', 'オペレーター派遣', 'シリアルチケット入場'],
+        partner: '株式会社 三桂'
+      }
+    ]
+  -
+    var RELEASES = [
+      {
+        date: '2020-09-13',
+        tag: ['プレスリリース', 'リミート実施'],
+        body: '川崎フロンターレ様２回目のリミートライブ実施致しました。(参加: 原田選手(MF/28)、神谷選手(DF/26)、サポーター180名)',
+        link: 'https://www.frontale.co.jp/info/2020/0907_9.html'
+      },
+      {
+        date: '2020-08-07',
+        body: '【通常盤限定】「Rain Drops『オントロジー』オンライン個別トークイベント」開催決定！！',
+        tag: ['プレスリリース'],
+        link: 'https://www.universal-music.co.jp/raindrops/news/2020-08-07-3/'
+      },
+      {
+        date: '2020-08-05',
+        body: 'ファンミーティングをオンライン化する「リミートライブ」川崎フロンターレとオンライングリーティングの効果検証を実施',
+        tag: ['プレスリリース'],
+        link: 'https://prtimes.jp/main/html/rd/p/000000008.000057781.html'
+      },
+      {
+        date: '2020-06-19',
+        body: '「SHIBUYA QWS（渋谷キューズ）」(渋谷スクランブルスクエア15F)で開催されたピッチイベント「QWSステージ#2」に登壇いたしました。',
+        tag: ['イベント・登壇'],
+        imgs: [
+          { alt: '', src: '/images/release/2020-06-19-0.png', width: '150px'},
+          { alt: '', src: '/images/release/2020-06-19-1.png', width: '150px'},
+          { alt: '', src: '/images/release/2020-06-19-2.png', width: '150px'}
+        ]
+      },
+      {
+        date: '2020-06-03',
+        body: 'オンライン握手会サービス「RE:MEET LIVE」サービス開始のお知らせ',
+        tag: ['プレスリリース'],
+        link: 'https://prtimes.jp/main/html/rd/p/000000007.000057781.html'
+      },
+      {
+        date: '2020-05-31',
+        body: 'ながさき経済2020年6月号にリミートライブと開発者 柴美津恵が特集されました。',
+        tag: ['取材'],
+        link: 'https://nagasaki-keizai.co.jp/archives/7539',
+        imgs: [
+          { alt: '', src: '/images/release/2020-06-nagasaki.jpg', width: '100px'}
+        ]
+      },
+      {
+        date: '2020-05-07',
+        body: 'リモートで握手会を再現したWebサービス「Re:Meet LIVE」（リミートライブ）の開発を開始',
+        tag: ['プレスリリース'],
+        link: 'https://prtimes.jp/main/html/rd/p/000000001.000057781.html'
+      },
+      {
+        date: '2020-04-23',
+        body: 'remeet.liveドメイン取得、トレーラーサイト公開'
+      }
+    ]
+  -
+    var PARTNERS = [
+      {
+        name: '取り扱い代理店',
+        items : [
+          {
+            name: '株式会社クオラス',
+            link: 'https://quaras.co.jp'
+          }
+        ]
+      },
+      {
+        name: 'チケット<br>プラットフォーム',
+        items : [
+          {
+            name: 'Peatix japan 株式会社',
+            link: 'https://peatix.com'
+          }
+        ]
+      },
+      {
+        name: '協賛・協力',
+        items : [
+          {
+            name: '株式会社三桂',
+            link: 'http://www.sankeipro.co.jp/'
+          },
+          {
+            name: 'SHIBUYA QWS（渋谷キューズ）',
+            link: 'https://shibuya-qws.com/'
+          }
+        ]
+      },
+      {
+        name: '対応施設',
+        items : [
+          {
+            name: '掲載待ち'
+          }
+        ]
+      }
+    ]
 include /component/globals/head.pug
   .page-wrap
     .container.main(style="display:none")
@@ -13,15 +200,12 @@ include /component/globals/head.pug
               .logo
                 img(src="/images/remeet-logo-small.png" width="80%")
               .title
-                span.inline-block 密にならずに逢いにいける
-                span.inline-block ファンミーティングをオンライン化。
-                span.inline-block 握手会・サイン会の代替販促会専用システム
-              p
-                | 「リミートライブ」は、コロナ禍において、コンサートや握手会といった集客を伴うイベントの開催ができなくなってしまったタレントさまと、「推し」に逢えなくなってしまったファンとを繋ぐ、密にならずに逢いに行けるWebサービスです。オンライントーク会、オンラインサイン会、オンライン2ショット用の専用機能を利用して「リミートしよう！」を合言葉に是非ご活用ください。
+                each item in HEAD_LINE
+                  span.inline-block #{item}
+              p #{MAIN_COPY}
               .sns
-                a(href="https://twitter.com/remeetlive") 公式ツイッター
-                a(href="https://www.facebook.com/remeetlive") 公式FACEBOOKページ
-                a(href="https://www.youtube.com/channel/UCruXABY_sqMuDZjW4H5-DKQ") 公式YOUTUBE
+                each item in SNS
+                  a(href=item.url) #{item.label}
             .flex
               img(src="/images/remeet-mock.png", alt="製品画像")
         section.section#playground
@@ -35,6 +219,71 @@ include /component/globals/head.pug
               .inline-block 確認しておきましょう。
           .section-action
             a.btn(href="https://playground.remeet.live/") 事前にリミートを試してみる
+        section.section#results
+          h1
+            .section-title 実績
+            .section-subtile RESULTS
+          .section-content
+            .total-wrap
+              p 2020年6月3日サービス提供開始から
+              - var COUNT = 0
+              - var FUN_COUNT = 0
+              - var TICKET_COUNT = 0
+              each item in RESULTS
+                - FUN_COUNT+=item.fun
+                - TICKET_COUNT+=item.tickets
+                - COUNT++
+              .flex-box
+                .li
+                  .label 実施回数
+                  .body 
+                    span.num #{COUNT}
+                    span.fix 回
+                .li
+                  .label のべ参加人数
+                  .body
+                    span.pri 約
+                    span.num #{FUN_COUNT}
+                    span.fix 名
+                .li
+                  .label のべ配布チケット枚数
+                  .body 
+                    span.pri 約
+                    span.num #{TICKET_COUNT}
+                    span.fix 枚
+            .divider
+            .scroll-wrap
+              .flex-box(style=`width:${260*RESULTS.length+1}px`
+              )
+                each item in RESULTS
+                  .item
+                    .date #{item.date}
+                    .company
+                      span #{item.company}様
+                    .description
+                      span #{item.description}
+                    .li.place
+                      .label 実施場所
+                      .body !{item.place}
+                    .li.talentinfo
+                      .label 対応メンバー
+                      .body
+                        | !{item.talentinfo}
+                        span.part (最大#{item.part}部)
+                    .li.fun
+                      .label 参加人数
+                      .body #{item.fun}名
+                    .li.tickets
+                      .label 配布チケット
+                      .body #{item.tickets}枚
+                    .li.partner
+                      .label 協力・パートナー
+                      .body #{item.partner}
+                    .li.options
+                      .label ご利用機能
+                      .body
+                        each tag in item.optionsUse
+                          span.tips #{tag}
         section.section#partner
           h1
             .section-title オフィシャルパートナー
@@ -42,49 +291,7 @@ include /component/globals/head.pug
           .section-content
             p
               |「リミートライブ」はライブハウスと同様の「箱貸し方式」を採用いたします。サービス開始当初より、安定運営にご協力をいただける企業様をオフィシャルパートナーとしております。
-            -
-              var areas = [
-                {
-                  name: '取り扱い代理店',
-                  items : [
-                    {
-                      name: '株式会社クオラス',
-                      link: 'https://quaras.co.jp'
-                    }
-                  ]
-                },
-                {
-                  name: 'チケット<br>プラットフォーム',
-                  items : [
-                    {
-                      name: 'Peatix japan 株式会社',
-                      link: 'https://peatix.com'
-                    }
-                  ]
-                },
-                {
-                  name: '協賛・協力',
-                  items : [
-                    {
-                      name: '株式会社三桂',
-                      link: 'http://www.sankeipro.co.jp/'
-                    },
-                    {
-                      name: 'SHIBUYA QWS（渋谷キューズ）',
-                      link: 'https://shibuya-qws.com/'
-                    }
-                  ]
-                },
-                {
-                  name: '対応施設',
-                  items : [
-                    {
-                      name: '掲載待ち'
-                    }
-                  ]
-                }
-              ]
-            each area in areas
+            each area in PARTNERS
               .item
                 .label !{area.name}
                 .com
@@ -131,57 +338,7 @@ include /component/globals/head.pug
             .section-title お知らせ
             .section-subtile RELEASE
           .section-content
-            -
-              var items = [
-               {
-                  date: '2020-08-07',
-                  body: '【通常盤限定】「Rain Drops『オントロジー』オンライン個別トークイベント」開催決定！！',
-                  tag: ['プレスリリース'],
-                  link: 'https://www.universal-music.co.jp/raindrops/news/2020-08-07-3/'
-                },
-                {
-                  date: '2020-08-05',
-                  body: 'ファンミーティングをオンライン化する「リミートライブ」川崎フロンターレとオンライングリーティングの効果検証を実施',
-                  tag: ['プレスリリース'],
-                  link: 'https://prtimes.jp/main/html/rd/p/000000008.000057781.html'
-                },
-                {
-                  date: '2020-06-19',
-                  body: '「SHIBUYA QWS（渋谷キューズ）」(渋谷スクランブルスクエア15F)で開催されたピッチイベント「QWSステージ#2」に登壇いたしました。',
-                  tag: ['イベント・登壇'],
-                  imgs: [
-                    { alt: '', src: '/images/release/2020-06-19-0.png', width: '150px'},
-                    { alt: '', src: '/images/release/2020-06-19-1.png', width: '150px'},
-                    { alt: '', src: '/images/release/2020-06-19-2.png', width: '150px'}
-                  ]
-                },
-                {
-                  date: '2020-06-03',
-                  body: 'オンライン握手会サービス「RE:MEET LIVE」サービス開始のお知らせ',
-                  tag: ['プレスリリース'],
-                  link: 'https://prtimes.jp/main/html/rd/p/000000007.000057781.html'
-                },
-                {
-                  date: '2020-05-31',
-                  body: 'ながさき経済2020年6月号にリミートライブと開発者 柴美津恵が特集されました。',
-                  tag: ['取材'],
-                  link: 'https://nagasaki-keizai.co.jp/archives/7539',
-                  imgs: [
-                    { alt: '', src: '/images/release/2020-06-nagasaki.jpg', width: '100px'}
-                  ]
-                },
-                {
-                  date: '2020-05-07',
-                  body: 'リモートで握手会を再現したWebサービス「Re:Meet LIVE」（リミートライブ）の開発を開始',
-                  tag: ['プレスリリース'],
-                  link: 'https://prtimes.jp/main/html/rd/p/000000001.000057781.html'
-                },
-                {
-                  date: '2020-04-23',
-                  body: 'remeet.liveドメイン取得、トレーラーサイト公開'
-                }
-              ]
-            each item in items
+            each item in RELEASES
               .item
                 .date #{item.date}
                 if item.tag
@@ -216,12 +373,13 @@ include /component/globals/head.pug
             .section-title シェア
             .section-subtile SHARE
           .section-content
-            .item
-              a.btn.tw(href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fremeet.live%2F&text=%E4%BB%8A%E3%80%81%E9%80%A2%E3%81%84%E3%81%AB%E3%81%AB%E8%A1%8C%E3%81%91%E3%82%8B%E3%83%AA%E3%83%9F%E3%83%BC%E3%83%88%E3%83%A9%E3%82%A4%E3%83%96%E3%80%82%E4%BD%93%E9%A8%93%E7%89%88%E3%81%A7%E3%83%AA%E3%83%9F%E3%83%BC%E3%83%88%E3%81%AE%E6%B5%81%E3%82%8C%E3%82%92%E7%A2%BA%E8%AA%8D%EF%BC%81%E6%8E%A8%E3%81%97%E3%81%AB%E9%80%A2%E3%81%86%E6%BA%96%E5%82%99%E3%81%AF%E3%81%A7%E3%81%8D%E3%81%A6%E3%81%BE%E3%81%99%E3%81%8B%EF%BC%9F") Twitter
-            .item
-              a.btn.fb(href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fremeet.live%2F") FACEBOOK
-            .item
-              a.btn.le(href="https://access.line.me/oauth2/v2.1/login?loginState=cGI676avUZDMSUxGG4mceh&loginChannelId=1446101138&returnUri=%2Foauth2%2Fv2.1%2Fauthorize%2Fconsent%3Fscope%3Dopenid%2Bprofile%2Bfriends%2Bgroups%2Btimeline.post%2Bmessage.write%26response_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fsocial-plugins.line.me%252Flineit%252FloginCallback%253FreturnUrl%253Dhttps%25253A%25252F%25252Fsocial-plugins.line.me%25252Flineit%25252Fshare%25253Furl%25253D%252526text%25253D%252525E4%252525BB%2525258A%252525E3%25252580%25252581%252525E9%25252580%252525A2%252525E3%25252581%25252584%252525E3%25252581%252525AB%252525E3%25252581%252525AB%252525E8%252525A1%2525258C%252525E3%25252581%25252591%252525E3%25252582%2525258B%252525E3%25252583%252525AA%252525E3%25252583%2525259F%252525E3%25252583%252525BC%252525E3%25252583%25252588%252525E3%25252583%252525A9%252525E3%25252582%252525A4%252525E3%25252583%25252596%252525E3%25252580%25252582%252525E4%252525BD%25252593%252525E9%252525A8%25252593%252525E7%25252589%25252588%252525E3%25252581%252525A7%252525E3%25252583%252525AA%252525E3%25252583%2525259F%252525E3%25252583%252525BC%252525E3%25252583%25252588%252525E3%25252581%252525AE%252525E6%252525B5%25252581%252525E3%25252582%2525258C%252525E3%25252582%25252592%252525E7%252525A2%252525BA%252525E8%252525AA%2525258D%252525EF%252525BC%25252581%252525E6%2525258E%252525A8%252525E3%25252581%25252597%252525E3%25252581%252525AB%252525E9%25252580%252525A2%252525E3%25252581%25252586%252525E6%252525BA%25252596%252525E5%25252582%25252599%252525E3%25252581%252525AF%252525E3%25252581%252525A7%252525E3%25252581%2525258D%252525E3%25252581%252525A6%252525E3%25252581%252525BE%252525E3%25252581%25252599%252525E3%25252581%2525258B%252525EF%252525BC%2525259F%25252520https%2525253A%2525252F%2525252Fremeet.live%2525252F%252526from%25253Dline_scheme%26state%3D3e57af97980a03b8d567f2e227201b%26client_id%3D1446101138#/") LINE
+            each item in SNS
+              if item.shareLabel
+                .item
+                  a.btn(
+                    href=item.share
+                    class=item.key
+                  ) #{item.shareLabel}
       .global-footer
         include /component/globals/footer.pug
     .container.loading
