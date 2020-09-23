@@ -219,71 +219,71 @@ include /component/globals/head.pug
               .inline-block 確認しておきましょう。
           .section-action
             a.btn(href="https://playground.remeet.live/") 事前にリミートを試してみる
-        section.section#results
-          h1
-            .section-title 実績
-            .section-subtile RESULTS
-          .section-content
-            .total-wrap
-              p 2020年6月3日サービス提供開始から
-              - var COUNT = 0
-              - var FUN_COUNT = 0
-              - var TICKET_COUNT = 0
-              each item in RESULTS
-                - FUN_COUNT+=item.fun
-                - TICKET_COUNT+=item.tickets
-                - COUNT++
-              .flex-box
-                .li
-                  .label 実施回数
-                  .body 
-                    span.num #{COUNT}
-                    span.fix 回
-                .li
-                  .label のべ参加人数
-                  .body
-                    span.pri 約
-                    span.num #{FUN_COUNT}
-                    span.fix 名
-                .li
-                  .label のべ配布チケット枚数
-                  .body 
-                    span.pri 約
-                    span.num #{TICKET_COUNT}
-                    span.fix 枚
-            .divider
-            .scroll-wrap
-              .flex-box(style=`width:${260*RESULTS.length+1}px`
-              )
-                each item in RESULTS
-                  .item
-                    .date #{item.date}
-                    .company
-                      span #{item.company}様
-                    .description
-                      span #{item.description}
-                    .li.place
-                      .label 実施場所
-                      .body !{item.place}
-                    .li.talentinfo
-                      .label 対応メンバー
-                      .body
-                        | !{item.talentinfo}
-                        span.part (最大#{item.part}部)
-                    .li.fun
-                      .label 参加人数
-                      .body #{item.fun}名
-                    .li.tickets
-                      .label 配布チケット
-                      .body #{item.tickets}枚
-                    .li.partner
-                      .label 協力・パートナー
-                      .body #{item.partner}
-                    .li.options
-                      .label ご利用機能
-                      .body
-                        each tag in item.optionsUse
-                          span.tips #{tag}
+        //- section.section#results
+        //-   h1
+        //-     .section-title 実績
+        //-     .section-subtile RESULTS
+        //-   .section-content
+        //-     .total-wrap
+        //-       p 2020年6月3日サービス提供開始から
+        //-       - var COUNT = 0
+        //-       - var FUN_COUNT = 0
+        //-       - var TICKET_COUNT = 0
+        //-       each item in RESULTS
+        //-         - FUN_COUNT+=item.fun
+        //-         - TICKET_COUNT+=item.tickets
+        //-         - COUNT++
+        //-       .flex-box
+        //-         .li
+        //-           .label 実施回数
+        //-           .body 
+        //-             span.num #{COUNT}
+        //-             span.fix 回
+        //-         .li
+        //-           .label のべ参加人数
+        //-           .body
+        //-             span.pri 約
+        //-             span.num #{FUN_COUNT}
+        //-             span.fix 名
+        //-         .li
+        //-           .label のべ配布チケット枚数
+        //-           .body 
+        //-             span.pri 約
+        //-             span.num #{TICKET_COUNT}
+        //-             span.fix 枚
+        //-     .divider
+        //-     .scroll-wrap
+        //-       .flex-box(style=`width:${260*RESULTS.length+1}px`
+        //-       )
+        //-         each item in RESULTS
+        //-           .item
+        //-             .date #{item.date}
+        //-             .company
+        //-               span #{item.company}様
+        //-             .description
+        //-               span #{item.description}
+        //-             .li.place
+        //-               .label 実施場所
+        //-               .body !{item.place}
+        //-             .li.talentinfo
+        //-               .label 対応メンバー
+        //-               .body
+        //-                 | !{item.talentinfo}
+        //-                 span.part (最大#{item.part}部)
+        //-             .li.fun
+        //-               .label 参加人数
+        //-               .body #{item.fun}名
+        //-             .li.tickets
+        //-               .label 配布チケット
+        //-               .body #{item.tickets}枚
+        //-             .li.partner
+        //-               .label 協力・パートナー
+        //-               .body #{item.partner}
+        //-             .li.options
+        //-               .label ご利用機能
+        //-               .body
+        //-                 each tag in item.optionsUse
+        //-                   span.tips #{tag}
         section.section#partner
           h1
             .section-title オフィシャルパートナー
