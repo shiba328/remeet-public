@@ -1,0 +1,17 @@
+block vars
+
+  -
+    function replaceAmp(str) {
+      console.log(str)
+    }
+
+each md in getSearchList(functions_single_list)
+  div(class="post-list-item")
+    div(class="col")
+      .post-title
+        a(href=`${md.url}`) #{md.title}
+      .excerpt
+        | !{md.excerpt}
+      .actions
+        a(href=`${md.url}`) 詳細を見る
+

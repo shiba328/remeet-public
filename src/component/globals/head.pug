@@ -48,8 +48,8 @@ html(amp lang="ja")
       })(window,document,'script','dataLayer','GTM-NX8HB2V');
     script(async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js")
     -
-      function getSearchList(all_mds) {
-        return all_mds.map((v) => {
+      function getSearchList(support_all_mds) {
+        return support_all_mds.map((v) => {
           var attr = v.attributes
           if(!attr) return false
           var parent = (!attr.parent) ? "" : "/" + attr.parent;
@@ -78,7 +78,7 @@ html(amp lang="ja")
         })
       }
     script.
-      const SEARCH_LIST = !{JSON.stringify(getSearchList(all_mds))}
+      const SEARCH_LIST = !{JSON.stringify(getSearchList(support_all_mds))}
 
   body(class=`${BODY_CLASS} ${LAYOUT_BODY_CLASS}`)
     noscript.

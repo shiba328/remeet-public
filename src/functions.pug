@@ -1,0 +1,14 @@
+block vars
+  - var BODY_CLASS = "functions"
+
+include /component/globals/head.pug
+  .page-wrap
+    .container.main(style="display:none")
+      .global-header
+        .layout
+          .branding
+            a(href="/") Re:Meet Live
+      .global-body
+        .section-content
+          h1 機能紹介
+          include /component/functions-all.pug
