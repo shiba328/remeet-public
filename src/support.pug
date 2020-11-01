@@ -93,10 +93,27 @@ include /component/globals/head.pug
       return queries;
     }
   script.
-    var tw = /t\.co/g;
-    if(tw.test(document.referrer)) {
+    const ua = navigator.userAgent.toLowerCase()
+    const isIOS = /iphone|ipod|ipad/.test(ua)
+    const isLine = /line/.test(ua)
+    const isFb = /fb/.test(ua)
+    const isTw = /twitter/.test(ua)
+    const isSafari = /safari/.test(ua)
+    const isChrome = /crios/.test(ua)
+    const isTwitter = /t\.co/.test(document.referrer)
+
+    // Twitterから来たか判定
+    if(isTwitter) {
       document.write("Twitterアプリからアクセス")
     }
     document.write("リファラー：" + document.referrer)
-    document.write("リファラー：" + navigator.userAgent)
+    document.write("UA：" + navigator.userAgent)
+    document.write("isIOS" + isIOS)
+    document.write("isLine" + isLine)
+    document.write("isFb" + isFb)
+    document.write("isTw" + isTw)
+    document.write("isSafari" + isSafari)
+    document.write("isChrome" + isChrome)
+    document.write("isTwitter" + isTwitter)
+
     
