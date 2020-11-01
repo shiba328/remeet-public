@@ -29,9 +29,8 @@ function getUrlQueries() {
   });
 
   return queries;
-}</script><script>var iOS = (navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false);
-var isWKWebView = false;
-if (window.webkit && window.webkit.messageHandlers) {
-    isWKWebView = true;
+}</script><script>var tw = /t\.co/g;
+if(tw.test(document.referrer)) {
+  document.write("Twitterアプリからアクセス")
 }
-document.write(isWKWebView + iOS)</script><script src="../main.js"></script></body></html>
+document.write("リファラー：" + document.referrer)</script><script src="../main.js"></script></body></html>
