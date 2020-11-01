@@ -2,9 +2,17 @@
 @custom-media --lg (min-width: 1024px);
 
 .single-post {
+  img {
+    filter: drop-shadow(2px 4px 2px rgba(0,0,0,0.5));
+  }
+
   .title {
-    font-size: 120%;
+    font-size: 150%;
     margin-bottom: 1em;
+  }
+
+  h2 {
+    font-weight: normal;
   }
 
   table {
@@ -20,7 +28,9 @@
     }
   }
 }
-
+.support {
+  
+}
 .functions {
   .post-list-item {
     .excerpt {
@@ -29,6 +39,7 @@
     .actions {
       text-align: right;
       text-decoration: underline;
+      font-size: 80%;
     }
   }
 }

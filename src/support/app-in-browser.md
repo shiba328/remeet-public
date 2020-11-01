@@ -1,9 +1,10 @@
 ---
 name: app-in-browser
-title: アプリ内ブラウザを利用することは可能ですか？
+title: ツイッターやGmailアプリなどで開くブラウザにご注意ください！
 parent: support
 ---
 
+Twitter・FACEBOOK・Gmail・LINEなどアプリ経由で開かれた場合、1on1画面に繋がりません。
 一部のアプリにおいて、全部または一部の機能が利用可能ですが、原則原則リミートライブでは以下を推奨します。
 
 - iOS

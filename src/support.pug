@@ -9,13 +9,54 @@ include /component/globals/head.pug
           .branding
             a(href="/") Re:Meet Live
       .global-body
+
         .section-content
+          h3 動作環境設定方法
+          .flex-box
+            .col
+              p iPhoneをお使いの場合
+              ol
+                li: a(href="https://speedtest.gate02.ne.jp/") 通信環境を確認します。
+                li Safariのカメラ・マイクの許可を確認します。
+                li イヤホンを利用します。音量を確認します。
+                li アプリをすべて閉じます。
+                li Safariを立ち上げます。
+                li タブをすべて閉じます。
+                li 新しいタブを追加します。
+                li URLをコピペしてアクセスします。
+            .col
+              p Androidをお使いの場合
+              ol
+                li: a(href="https://speedtest.gate02.ne.jp/")  通信環境を確認します。
+                li  Chromeのカメラ・マイクの許可を確認します。
+                li  イヤホンを利用します。音量を確認します。
+                li  アプリをすべて閉じます。
+                li  Chromeのバージョンを最新にします。
+                li  Chromeを立ち上げます。
+                li  タブをすべて閉じます。
+                li  新しいタブを追加します。
+                li  URLをコピペしてアクセスします。
+          h4 通信環境・パケット不足に注意　低速モードではご利用できません
+          p 相互動画通信を行うため、参加者の電波状況により動画が停止する場合があります。キャリア通信は月末のパケット不足等にお気をつけください。不安な場合はWi-Fiをご利用ください。
+          h4 
+            a(href="https://event.remeet.live/n3VwOnlu/demo/") 
+
+        .section-content
+          h3 その他のご質問
           include /component/support-all.pug
           .contact-us
             div 当日のお問い合わせに関しましては、以下にご連絡ください
+            #n3VwOnlu(style="display:none")
+              div
+                a(href="https://docs.google.com/forms/d/e/1FAIpQLSf9EcAyWVSW5RMJi4WLnHY2RmmvVeFuxla89KrVYIEPnvtu4Q/viewform?usp=sf_link") リミート技術サポートお問い合わせページを開く
+            #AAyBP386(style="display:none")
+              div
+                a(href="https://docs.google.com/forms/d/e/1FAIpQLSe4cGkJ4O18UvZLQi8nXJjUiROAqa88qCKYgNe9obltrXPetA/viewform?usp=sf_link") マクドナルドハッピーデーお問い合わせページを開く
+            #WK5IBCPD(style="display:none")
+              div
+                a(href="https://docs.google.com/forms/d/e/1FAIpQLSdNgGnmriWmLevgylZW4fXx-0pyqmJ5RHi8jfHTdYPRYgsjbQ/viewform") 応援ありがとう！オンラインお見送り会お問い合わせページを開く
             #djThXinX(style="display:none")
               div(style="padding: 20px") 当選通知に記載されたアニメイト問い合わせください
-
       .global-footer
         include /component/globals/footer.pug
     .container.loading

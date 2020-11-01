@@ -9,7 +9,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production",
-    "dev": "webpack-dev-server --mode development --open",
+    "dev": "webpack-dev-server --mode production --open",
     "start": "webpack-dev-server --mode production",
     "up": "firebase deploy --only hosting"
   },
@@ -25,6 +25,7 @@
     "copy-webpack-plugin": "^5.1.1",
     "css-loader": "^3.5.2",
     "d3plus-text": "^0.9.51",
+    "detect-inapp": "^1.4.0",
     "eslint": "^6.8.0",
     "eslint-loader": "^4.0.0",
     "frontmatter-markdown-loader": "^3.3.0",
@@ -35,6 +36,7 @@
     "html-webpack-plugin": "^4.2.0",
     "jstransformer-markdown-it": "^2.1.0",
     "markdown-it-attrs": "^3.0.2",
+    "markdown-it-div": "^1.1.0",
     "markdown-it-mermaid": "^0.2.5",
     "markdown-it-prism": "^2.0.5",
     "mermaid": "^8.5.0",

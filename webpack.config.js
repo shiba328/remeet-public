@@ -10,6 +10,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const markdownIt = require('markdown-it');
 const prism = require('markdown-it-prism');
 const attrs = require('markdown-it-attrs');
+const div = require('markdown-it-div');
 const mermaid = require('markdown-it-mermaid');
 
 const fs = require('fs');
@@ -159,13 +160,24 @@ module.exports = (env, argv) => {
       // ])
     ]
       .concat(MyPageLoad('./src/support', 'support/', './src/layouts/support.pug'))
-      // .concat(MyPageLoad('./src/support/svg', 'svg/', './src/layouts/support.pug'))
+      .concat(MyPageLoad('./src/functions', 'functions/', './src/layouts/functions.pug'))
       // .concat(MyPageLoad('./src/support/webpack-media', 'webpack-media/', './src/layouts/support.pug'))
       // .concat(LpPage('./src/lp', 'lp/'))
-
       .concat(new HtmlWebPackPlugin({
         template: path.join(__dirname, 'src/support.pug'),
         filename: 'support/index.html',
+        minify: {
+          collapseWhitespace: argv.mode === 'development',
+          removeComments: argv.mode === 'development',
+          removeRedundantAttributes: argv.mode === 'development',
+          removeScriptTypeAttributes: argv.mode === 'development',
+          removeStyleLinkTypeAttributes: argv.mode === 'development',
+          useShortDoctype: argv.mode === 'development'
+        }
+      }))
+      .concat(new HtmlWebPackPlugin({
+        template: path.join(__dirname, 'src/functions.pug'),
+        filename: 'functions/index.html',
         minify: {
           collapseWhitespace: argv.mode === 'development',
           removeComments: argv.mode === 'development',
@@ -221,6 +233,7 @@ module.exports = (env, argv) => {
                 .use(mermaid.default)
                 .use(prism, { defaultLanguage: 'shell' })
                 .use(attrs, {})
+                .use(div, {})
               }
             }
           ]
