@@ -93,5 +93,10 @@ include /component/globals/head.pug
       return queries;
     }
   script.
-    document.write("リファラー：" + document.referrer)
+    var iOS = (navigator.userAgent.match(/(iPad|iPhone|iPod)/g) ? true : false);
+    var isWKWebView = false;
+    if (window.webkit && window.webkit.messageHandlers) {
+        isWKWebView = true;
+    }
+    document.write(isWKWebView + iOS)
   
