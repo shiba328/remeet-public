@@ -38,9 +38,13 @@ const isSafari = /safari/.test(ua)
 const isChrome = /crios/.test(ua)
 const isTwitter = /t\.co/.test(document.referrer)
 
-// Twitterから来たか判定
-if(isTwitter) {
-  document.write("Twitterアプリからアクセス")
+// iOSでTwitterから来たか判定
+if(isIOS && isTwitter || isIOS && isTw) {
+  document.write("Twitterアプリからアクセスのの可能性があります。リミートが正しく動作しない可能性がありますので、Safariで開き直してください")
+}
+// iOSでfacebookからから来た判定
+if(isIOS && isFb) {
+  document.write("メッセンジャーアプリやfacebookアプリからアクセスの可能性があります。リミートが正しく動作しない可能性がありますので、Safariで開き直してください")
 }
 document.write("リファラー：" + document.referrer)
 document.write("UA：" + navigator.userAgent)
