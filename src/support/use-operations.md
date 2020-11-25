@@ -37,42 +37,8 @@ GMAIL・QRコードリーダー・ツイッターFACEBOOKなどのアプリか�
 当サービスは対面通信を行うサービスです。内臓カメラ付きの端末(PC・スマートフォン等)もしくは外付けカメラを接続した端末をご利用ください。<span class="red">カメラ機能がない端末の場合、ご参加いただけません。カメラの設定がオフの場合も正常に動作しない場合がございます。</span>
 カメラ、マイク、音声の設定を必ず確認の上、ご参加をお願い致します。
 顔を表示したくない場合は、マスク等をご利用ください。
-<div class="flex-box">
-<div class="col">
 
-### iPhone・iPadの設定方法
-![iPhoneのSafariのカメラとマイクの設定方法](/images/support/camera-mic-iphone.gif)
-
-[動画を再生](/images/support/camera-mic-iphone.mp4){target="_blank"}
-
-1. 設定アプリを開く
-2. Safariを選択
-3. カメラを開く
-4. 許可にする
-5. 一つ戻り
-6. マイクを開く
-7. 許可にする
-</div>
-<div class="col">
-
-### Androidの設定方法
-![AndroidのChromeのカメラとマイクの設定方法](/images/support/camera-mic-android.gif)
-
-[動画を再生](/images/support/camera-mic-android.mp4){target="_blank"}
-
-1. 設定アプリを開く
-1. アプリと通知を開く
-1. 詳細設定を開く
-2. Chromeを選択
-3. 権限を開く
-1. カメラを開く
-4. アプリ使用中のみ許可にする
-5. 一つ戻り
-6. マイクを開く
-7. アプリ使用中のみ許可にする
-</div>
-</div>
-
+[カメラとマイクの許可](/support/camera-mic){.btn}
 {#packet}
 
 ## 通信環境・パケット不足に注意!低速モードではご利用できません  {class="red"}

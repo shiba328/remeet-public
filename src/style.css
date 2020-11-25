@@ -66,6 +66,10 @@ img {
       }
     }
   }
+
+  &.justify-evenly {
+    justify-content: space-evenly;
+  }
 }
 
 .icon {
