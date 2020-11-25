@@ -229,7 +229,10 @@ module.exports = (env, argv) => {
             {
               loader: 'frontmatter-markdown-loader',
               options: {
-                markdownIt: markdownIt()
+                markdownIt: markdownIt({
+                  breaks: true,
+                  html: true
+                })
                 .use(mermaid.default)
                 .use(prism, { defaultLanguage: 'shell' })
                 .use(attrs, {})
