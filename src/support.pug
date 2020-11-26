@@ -11,7 +11,7 @@ include /component/globals/head.pug
       .global-body
 
         .section-content
-          h3 動作環境設定方法
+          h3 参加方法
           .flex-box
             .col
               p iPhoneをお使いの場合
@@ -49,14 +49,9 @@ include /component/globals/head.pug
             #n3VwOnlu(style="display:none")
               div
                 a(href="https://docs.google.com/forms/d/e/1FAIpQLSf9EcAyWVSW5RMJi4WLnHY2RmmvVeFuxla89KrVYIEPnvtu4Q/viewform?usp=sf_link") リミート技術サポートお問い合わせページを開く
-            #AAyBP386(style="display:none")
-              div
-                a(href="https://docs.google.com/forms/d/e/1FAIpQLSe4cGkJ4O18UvZLQi8nXJjUiROAqa88qCKYgNe9obltrXPetA/viewform?usp=sf_link") マクドナルドハッピーデーお問い合わせページを開く
             #WK5IBCPD(style="display:none")
               div
                 a(href="https://docs.google.com/forms/d/e/1FAIpQLSdNgGnmriWmLevgylZW4fXx-0pyqmJ5RHi8jfHTdYPRYgsjbQ/viewform") 応援ありがとう！オンラインお見送り会お問い合わせページを開く
-            #djThXinX(style="display:none")
-              div(style="padding: 20px") 当選通知に記載されたアニメイト問い合わせください
       .global-footer
         include /component/globals/footer.pug
     .container.loading
@@ -92,32 +87,5 @@ include /component/globals/head.pug
 
       return queries;
     }
-  script.
-    const ua = navigator.userAgent.toLowerCase()
-    const isIOS = /iphone|ipod|ipad/.test(ua)
-    const isLine = /line/.test(ua)
-    const isFb = /fb/.test(ua)
-    const isTw = /twitter/.test(ua)
-    const isSafari = /safari/.test(ua)
-    const isChrome = /crios/.test(ua)
-    const isTwitter = /t\.co/.test(document.referrer)
-
-    // iOSでTwitterから来たか判定
-    if(isIOS && isTwitter || isIOS && isTw) {
-      document.write("Twitterアプリからアクセスのの可能性があります。リミートが正しく動作しない可能性がありますので、Safariで開き直してください")
-    }
-    // iOSでfacebookからから来た判定
-    if(isIOS && isFb) {
-      document.write("メッセンジャーアプリやfacebookアプリからアクセスの可能性があります。リミートが正しく動作しない可能性がありますので、Safariで開き直してください")
-    }
-    document.write("リファラー：" + document.referrer)
-    document.write("UA：" + navigator.userAgent)
-    document.write("isIOS" + isIOS)
-    document.write("isLine" + isLine)
-    document.write("isFb" + isFb)
-    document.write("isTw" + isTw)
-    document.write("isSafari" + isSafari)
-    document.write("isChrome" + isChrome)
-    document.write("isTwitter" + isTwitter)
 
     

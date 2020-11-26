@@ -10,22 +10,22 @@ parent: support
 
 ご利用になられる端末のOSをご確認いただき、該当ブラウザよりご参加ください。
 
-| 利用アプリ | iPhone・iPad | Android | Mac | Windows |
-| - | - | - | - | - |
-| Safari | ○ | ✕ | ○ | ✕ |
-| Chrome | ✕ | ○ | ○ | ○ |
-| FireFox | ✕ | ✕ | ○ | ○ |
-| Edge | ✕ | ✕ | ○ | ○ |
-| IE | ✕ | ✕ | ✕ | ✕ |
-| Gmailアプリ | ✕ | ✕ | ○ | ○ |
-| その他アプリ | ✕ | ✕ | ○ | ○ 
-
+| 利用方法 | iPhone・iPad | Android | mac | windows
+| - | - | - | - | - | 
+| ![Safari](/images/support/icon-safari.svg) | ![iPhone・iPadでご利用頂けます](/images/support/icon-ok.svg) | ![Androidは利用出来ません](/images/support/icon-ng.svg) | ![macでご利用頂けます](/images/support/icon-ok.svg) | ![windowsは利用出来ません](/images/support/icon-ng.svg) |
+| ![Google Chrome](/images/support/icon-chrome.svg) | ![iPhone・iPadは利用出来ません](/images/support/icon-ng.svg) | ![Androidでご利用頂けます](/images/support/icon-ok.svg) | ![macでご利用頂けます](/images/support/icon-ok.svg) | ![windowsでご利用頂けます](/images/support/icon-ok.svg) |
+| ![FireFox](/images/support/icon-ff.svg) | ![iPhone・iPadは利用出来ません](/images/support/icon-ng.svg) | ![Androidは利用出来ません](/images/support/icon-ng.svg) | ![macでご利用頂けます](/images/support/icon-ok.svg) | ![windowsでご利用頂けます](/images/support/icon-ok.svg) |
+| ![Microsoft Edge](/images/support/icon-edge.svg) | ![iPhone・iPadは利用出来ません](/images/support/icon-ng.svg) | ![Androidは利用出来ません](/images/support/icon-ng.svg) | ![macでご利用頂けます](/images/support/icon-ok.svg) | ![windowsでご利用頂けます](/images/support/icon-ok.svg) |
+| ![Microsoft IE](/images/support/icon-ie.svg) | ![iPhone・iPadは利用出来ません](/images/support/icon-ng.svg) | ![Androidは利用出来ません](/images/support/icon-ng.svg) | ![macは利用出来ません](/images/support/icon-ng.svg)  | ![windowsは利用出来ません](/images/support/icon-ng.svg) |
+| ![Gmail](/images/support/icon-gmail.svg) | ![iPhone・iPadは利用出来ません](/images/support/icon-ng.svg) | ![Androidは利用出来ません](/images/support/icon-ng.svg) | ![macでご利用頂けます](/images/support/icon-ok.svg) | ![windowsでご利用頂けます](/images/support/icon-ok.svg) |
+| ![App](/images/support/icon-others.svg) | ![iPhone・iPadは利用出来ません](/images/support/icon-ng.svg) | ![Androidは利用出来ません](/images/support/icon-ng.svg) | ![macでご利用頂けます](/images/support/icon-ok.svg) | ![windowsでご利用頂けます](/images/support/icon-ok.svg) |
 ※各ブラウザは最新版に更新を推奨します。古いAndroid端末でChromeで未更新のため接続ができない場合があります。
 
 - ※既定ブラウザの設定にご注意ください。
 - ※OS、ブラウザは最新版をご利用ください。なお、上記内でも一部環境では接続不良等が起きる場合もございます。あらかじめご了承ください。
 - ※本サービスはパソコン/スマートフォン（タブレット）にのみ対応しております。フィーチャーフォン（ガラケー）からはご利用いただけません。
 - ※iOS向けChromeブラウザでカメラが起動しません。事前にSafariに切り替えてご利用ください。{.red}
+- ご利用デバイスのスペックに動画品質が依存する場合がございます。CPUやメモリのスペックが足りない場合はスムーズな再生ができない場合があります。あらかじめご了承ください。
 
 GMAIL・QRコードリーダー・ツイッターFACEBOOKなどのアプリからのアクセスは特に注意 {.alert}
 
@@ -44,6 +44,7 @@ GMAIL・QRコードリーダー・ツイッターFACEBOOKなどのアプリか�
 ## 通信環境・パケット不足に注意!低速モードではご利用できません  {class="red"}
 相互動画通信を行うため、参加者の電波状況により動画が停止する場合があります。
 キャリア通信は月末のパケット不足等にお気をつけください。不安な場合はWiFiをご利用ください。公衆Wi-Fiでは、接続先の混雑により回線が不安定になる場合があります。ご注意ください。
+人混みやコンクリートで囲まれた場所は避けてください。
 
 [通信環境の確認をする](https://speedtest.gate02.ne.jp/){.btn}
 
