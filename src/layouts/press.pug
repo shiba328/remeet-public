@@ -1,7 +1,11 @@
 block vars
   - var BODY_CLASS = "single-post"
   - var LAYOUT_BODY_CLASS = "press"
-
+  //- if md
+  - var page_env = htmlWebpackPlugin.options.env
+  - var md = require(`~/${page_env.path}.md`);
+  - var attr = md.attributes
+  
   include /component/globals/head.pug
   .page-wrap
     .container

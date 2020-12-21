@@ -159,7 +159,7 @@ module.exports = (env, argv) => {
       //   }
       // ])
     ]
-      .concat(MyPageLoad('./src/press', 'press/', './src/layouts/support.pug'))
+      .concat(MyPageLoad('./src/press', 'press/', './src/layouts/press.pug'))
       .concat(MyPageLoad('./src/support', 'support/', './src/layouts/support.pug'))
       .concat(MyPageLoad('./src/functions', 'functions/', './src/layouts/functions.pug'))
       // .concat(MyPageLoad('./src/support/webpack-media', 'webpack-media/', './src/layouts/support.pug'))
