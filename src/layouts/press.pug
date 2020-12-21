@@ -1,0 +1,15 @@
+block vars
+  - var BODY_CLASS = "single-post"
+  - var LAYOUT_BODY_CLASS = "press"
+
+  include /component/globals/head.pug
+  .page-wrap
+    .container
+      .global-header
+        include /component/globals/header.pug
+      .global-body
+        .main
+          include /component/single.pug
+      .global-footer
+        include /component/globals/footer.pug
+  style.

@@ -142,10 +142,6 @@ module.exports = (env, argv) => {
         template: path.join(__dirname, 'src/brand.pug'),
         filename: 'brand/index.html'
       }),
-      new HtmlWebPackPlugin({
-        template: path.join(__dirname, 'src/press/201212-boatrace.md'),
-        filename: 'press/201212-boatrace/index.html'
-      }),
       // new GenerateSW(),
       new MiniCssExtractPlugin({
         // filename: "assets/css/style.css"
@@ -163,6 +159,7 @@ module.exports = (env, argv) => {
       //   }
       // ])
     ]
+      .concat(MyPageLoad('./src/press', 'press/', './src/layouts/support.pug'))
       .concat(MyPageLoad('./src/support', 'support/', './src/layouts/support.pug'))
       .concat(MyPageLoad('./src/functions', 'functions/', './src/layouts/functions.pug'))
       // .concat(MyPageLoad('./src/support/webpack-media', 'webpack-media/', './src/layouts/support.pug'))
