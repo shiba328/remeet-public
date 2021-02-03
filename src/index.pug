@@ -7,7 +7,7 @@ block vars
       "握手会・サイン会の代替販促会専用システム"
     ]
   -
-    var MAIN_COPY = "「リミートライブ」は、コロナ禍において、コンサートや握手会といった集客を伴うイベントの開催ができなくなってしまったタレントさまと、「推し」に逢えなくなってしまったファンとを繋ぐ、密にならずに逢いに行けるWebサービスです。オンライントーク会、オンラインサイン会、オンライン2ショット用の専用機能を利用して「リミートしよう！」を合言葉に是非ご活用ください。"
+    var MAIN_COPY = "「リミートライブ」は、コロナ禍において、握手会といった集客を伴うイベントの開催ができなくなってしまったタレントさまと、「推し」に逢えなくなってしまったファンとを繋ぐ、密にならずに逢いに行けるWebサービスです。オンライントーク会、オンラインサイン会、オンライン2ショット用の専用機能を利用して「リミートしよう！」を合言葉に是非ご活用ください。"
   -
     var SNS = [
       {
@@ -243,7 +243,9 @@ include /component/globals/head.pug
               .inline-block イベント前にリミートの使用方法を
               .inline-block 確認しておきましょう。
           .section-action
-            a.btn(href="https://playground.remeet.live/") 事前にリミートを試してみる
+            a.btn(href="https://event.remeet.live/n3VwOnlu/demo/") 事前にリミートを試してみる(接続のみ)
+            p ※参加すると実際に稼働中のリミート実機デモに接続します。簡易に体験したい場合は体験版を利用してください。
+            p ※2ショットのデモをご希望の場合はお問い合わせからご連絡ください。
         //- section.section#results
         //-   h1
         //-     .section-title 実績
@@ -378,21 +380,6 @@ include /component/globals/head.pug
                   .imgs
                     each img in item.imgs
                       img(src=`${img.src}`, alt=`${img.alt}`, style=`width: ${img.width}`)
-        section.section#trailer
-          h1
-            .section-title 製品CM
-            .section-subtile TRAILER
-          .section-content
-            .item
-              iframe(
-                width="360"
-                height="315"
-                src="https://www.youtube.com/embed/Q11_QRloopk"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-            )
-              p リミートライブ製品トレーラー「逢いたい」編
         section.section#share
           h1
             .section-title シェア
