@@ -34,6 +34,10 @@ html(amp lang="ja")
     meta(name="twitter:card", content="summary_large_image")
     meta(name="twitter:site", content=env.site.title)
     meta(name="twitter:description", content=env.site.description)
+
+    if BODY_CLASS == 'top'
+      link(rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css")
+      script(src="https://unpkg.com/swiper/swiper-bundle.min.js")
     -
       var icons = [
         "more_horiz",

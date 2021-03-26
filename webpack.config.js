@@ -1,7 +1,7 @@
 
 const TerserPlugin = require('terser-webpack-plugin');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-const { GenerateSW } = require('workbox-webpack-plugin');
+// const { GenerateSW } = require('workbox-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const HTMLInlineCSSWebpackPlugin = require("html-inline-css-webpack-plugin").default;

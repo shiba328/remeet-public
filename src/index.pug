@@ -57,7 +57,7 @@ block vars
       },
       {
         date: '2020年12月1日',
-        company: '北海道テレビジョン',
+        company: '北海道テレビ放送株式会社',
         description: 'onちゃん誕生日写真撮影会',
         optionsUse: ['シリアルチケット入場', '2ショット撮影', '遠隔監視'],
       },
@@ -240,58 +240,58 @@ include /component/globals/head.pug
             a.btn(href="https://event.remeet.live/n3VwOnlu/demo/") 事前にリミートを試してみる(接続のみ)
             p ※参加すると実際に稼働中のリミート実機デモに接続します。簡易に体験したい場合は体験版を利用してください。
             p ※2ショットのデモをご希望の場合はお問い合わせからご連絡ください。
-        //- section.section#results
-        //-   h1
-        //-     .section-title 実績
-        //-     .section-subtile RESULTS
-        //-   .swiper-container
-        //-     .swiper-wrapper
-        //-       each item in RESULTS
-        //-         .swiper-slide
-        //-           .item
-        //-             .date #{item.date}
-        //-             .company
-        //-               span #{item.company}様
-        //-             .description
-        //-               span #{item.description}
-        //-             if item.partner
-        //-               .li.partner
-        //-                 .label 協力・パートナー
-        //-                 .body #{item.partner}
-        //-             .li.options
-        //-               .label ご利用機能
-        //-               .body
-        //-                 each tag in item.optionsUse
-        //-                   span.tips #{tag}
-        //-     .swiper-pagination
-        //-   script. 
-        //-     const swiper = new Swiper('.swiper-container', {
-        //-       slidesPerView: 3,
-        //-       //- spaceBetween: 30,
-        //-       pagination: {
-        //-         el: '.swiper-pagination',
-        //-         clickable: true,
-        //-       }
-        //-     });
-        //-   style.
-        //-     .swiper-container {
-        //-       padding-bottom: 40px;
-        //-       padding-top: 10px;
-        //-     }
-        //-     .swiper-wrapper {
-        //-       height: auto;
-        //-     }
-        //-     .swiper-pagination {
-        //-       bottom: 0 !important;
-        //-     }
-        //-     .swiper-slide {
-        //-       height: auto;
-        //-     }
-        //-     .item {
-        //-       height: 100%;
-        //-       display: flex;
-        //-       flex-direction: column;
-        //-     }
+        section.section#results
+          h1
+            .section-title 実績
+            .section-subtile RESULTS
+          .swiper-container
+            .swiper-wrapper
+              each item in RESULTS
+                .swiper-slide
+                  .item
+                    .date #{item.date}
+                    .company
+                      span #{item.company}様
+                    .description
+                      span #{item.description}
+                    if item.partner
+                      .li.partner
+                        .label 協力・パートナー
+                        .body #{item.partner}
+                    //- .li.options
+                    //-   .label ご利用機能
+                    //-   .body
+                    //-     each tag in item.optionsUse
+                    //-       span.tips #{tag}
+            .swiper-pagination
+          script. 
+            const swiper = new Swiper('.swiper-container', {
+              slidesPerView: 3,
+              //- spaceBetween: 30,
+              pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+              }
+            });
+          style.
+            .swiper-container {
+              padding-bottom: 40px;
+              padding-top: 10px;
+            }
+            .swiper-wrapper {
+              height: auto;
+            }
+            .swiper-pagination {
+              bottom: 0 !important;
+            }
+            .swiper-slide {
+              height: auto;
+            }
+            .item {
+              height: 100%;
+              display: flex;
+              flex-direction: column;
+            }
         section.section#partner
           h1
             .section-title オフィシャルパートナー

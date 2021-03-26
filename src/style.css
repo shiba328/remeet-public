@@ -355,14 +355,23 @@ img {
       margin-bottom: 2em;
     }
 
-    .scroll-wrap {
-      overflow-x: auto;
-
+    
+    /* .scroll-wrap {
+      overflow-x: auto; */
       .item {
-        width: 220px;
+        margin:0 8px;
+        padding: 16px;
+        filter: drop-shadow(0px 0px 4px #2f000049);
+        background: #fff;
+        border-radius: 4px;
+        height: 100%;
+        box-sizing: border-box;
       }
-      .li {
+      .options {
         display: flex;
+        border-top: 1px solid #eee;
+        margin-top: auto;
+
         .label {
           font-size: 12px;
           margin-right: 10px;
@@ -379,8 +388,7 @@ img {
       .description {
         padding-bottom: 10px;
         margin-bottom: 10px;
-        font-size: 90%;
-        border-bottom: 1px solid #eee;
+        font-size: 80%;
       }
       .place {
         font-size: 12px;
@@ -400,7 +408,7 @@ img {
         font-size: 10px;
         background: #eee;
       }
-    }
+    /* } */
   }
   
   #playground {

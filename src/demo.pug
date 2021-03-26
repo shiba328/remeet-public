@@ -1,0 +1,14 @@
+block vars
+  - var BODY_CLASS = "demo"
+
+include /component/globals/head.pug
+  main
+    header.header
+      a.header__logo(title="リミートライブ")
+      .header__nav-group
+        a.header__nav-link(href="/product") パートナー
+        a.header__nav-link(href="/#partner") パートナー
+        a.header__nav-link(href="/#price") 価格
+        a.header__nav-link(href="/support") サポート
+      .header__nav-group
+        a.header__nav-link(href="/content") お問い合わせ
