@@ -263,17 +263,27 @@ include /component/globals/head.pug
                     //-   .body
                     //-     each tag in item.optionsUse
                     //-       span.tips #{tag}
+            .swiper-button-prev
+            .swiper-button-next
             .swiper-pagination
           script. 
             const swiper = new Swiper('.swiper-container', {
               slidesPerView: 3,
               //- spaceBetween: 30,
+              navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+              },
               pagination: {
                 el: '.swiper-pagination',
                 clickable: true,
               }
             });
           style.
+            .swiper-button-prev:after,
+            .swiper-button-next:after {
+              font-size: 25px;
+            }
             .swiper-container {
               padding-bottom: 40px;
               padding-top: 10px;
