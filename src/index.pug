@@ -7,7 +7,7 @@ block vars
       "握手会・サイン会の代替販促会専用システム"
     ]
   -
-    var MAIN_COPY = "「リミートライブ」は、コロナ禍において、握手会といった集客を伴うイベントの開催ができなくなってしまったタレントさまと、「推し」に逢えなくなってしまったファンとを繋ぐ、密にならずに逢いに行けるWebサービスです。オンライントーク会、オンラインサイン会、オンライン2ショット用の専用機能を利用して「リミートしよう！」を合言葉に是非ご活用ください。"
+    var MAIN_COPY = "「リミート®ライブ」は、コロナ禍において、握手会といった集客を伴うイベントの開催ができなくなってしまったタレントと「推し」に逢えなくなってしまったファンとを繋ぐ、密にならずに逢いに行けるWebサービスです。オンライントーク会、オンラインサイン会、オンライン2ショット用の専用機能を利用して「リミート®しよう！」を合言葉に是非ご活用ください。"
   -
     var SNS = [
       {
@@ -37,6 +37,12 @@ block vars
     ]
   -
     var RESULTS = [
+      {
+        date: '2021年5月21日',
+        company: 'アルバルク東京',
+        description: '2021シーズンThanksイベント',
+        optionsUse: ['シリアルチケット入場', '2ショット撮影'],
+      },
       {
         date: '2021年2月6日、7日',
         company: 'ソンジェfrom SUPERNOVA',
@@ -109,20 +115,20 @@ block vars
     var RELEASES = [
       {
         date: '2020-12-12',
-        tag: ['プレスリリース', 'リミート実施'],
+        tag: ['プレスリリース', 'リミート®実施'],
         body: '一般財団法人BOATRACE振興会様のオンライントークイベントをRe:Meet LIVEで実施致しました。テレボート会員様向けに事前応募抽選を行い、当選されたお客様にご参加頂きました 。選手（ボートレーサー）は自宅から運営本部とリモートでつなぎ、完全リモート状態で実施。イベント運営を株式会社クオラスが行い、システム貸し、特設サイト制作を当社が行いました。',
         link: 'https://remeet.live/press/201212-boatrace/'
       },
       {
         date: '2020-10-24',
-        tag: ['プレスリリース', 'リミート実施'],
-        body: '川崎フロンターレ様ファン感謝デー2020のリミートライブ実施致しました。(参加: 全選手と監督計29名、サポーター2500名)',
+        tag: ['プレスリリース', 'リミート®実施'],
+        body: '川崎フロンターレ様ファン感謝デー2020のリミート®ライブ実施致しました。(参加: 全選手と監督計29名、サポーター2500名)',
         link: 'https://prtimes.jp/main/html/rd/p/000000009.000057781.html'
       },
       {
         date: '2020-09-13',
-        tag: ['プレスリリース', 'リミート実施'],
-        body: '川崎フロンターレ様２回目のリミートライブ実施致しました。(参加: 原田選手(MF/28)、神谷選手(DF/26)、サポーター180名)',
+        tag: ['プレスリリース', 'リミート®実施'],
+        body: '川崎フロンターレ様２回目のリミート®ライブ実施致しました。(参加: 原田選手(MF/28)、神谷選手(DF/26)、サポーター180名)',
         link: 'https://www.frontale.co.jp/info/2020/0907_9.html'
       },
       {
@@ -133,7 +139,7 @@ block vars
       },
       {
         date: '2020-08-05',
-        body: 'ファンミーティングをオンライン化する「リミートライブ」川崎フロンターレとオンライングリーティングの効果検証を実施',
+        body: 'ファンミーティングをオンライン化する「リミート®ライブ」川崎フロンターレとオンライングリーティングの効果検証を実施',
         tag: ['プレスリリース'],
         link: 'https://prtimes.jp/main/html/rd/p/000000008.000057781.html'
       },
@@ -155,7 +161,7 @@ block vars
       },
       {
         date: '2020-05-31',
-        body: 'ながさき経済2020年6月号にリミートライブと開発者 柴美津恵が特集されました。',
+        body: 'ながさき経済2020年6月号にリミート®ライブと開発者 柴美津恵が特集されました。',
         tag: ['取材'],
         link: 'https://nagasaki-keizai.co.jp/archives/7539',
         imgs: [
@@ -164,7 +170,7 @@ block vars
       },
       {
         date: '2020-05-07',
-        body: 'リモートで握手会を再現したWebサービス「Re:Meet LIVE」（リミートライブ）の開発を開始',
+        body: 'リモートで握手会を再現したWebサービス「Re:Meet LIVE」（リミート®ライブ）の開発を開始',
         tag: ['プレスリリース'],
         link: 'https://prtimes.jp/main/html/rd/p/000000001.000057781.html'
       },
@@ -207,39 +213,66 @@ block vars
         ]
       }
     ]
+  -
+    var POINTS = [
+      {
+        title: 'アカウント登録・アプリDl・投げ銭なし',
+        disc: '一般的なビデオ通話アプリと異なり、事前のアプリダウンロードやアプリへのアカウント登録が不要です。個人情報や支払い情報登録を行わないため安心して利用いただます。また投げ銭などの支払い機能は非搭載。未成年の参加も安心。'
+      },
+      {
+        title: 'ハガシのタイムロスは0秒',
+        disc: '実際の握手会で参加者を切り替えるハガシは、WEB会議システムを利用するとタイムロスが発生します。専用設計されシステムでハガシは自動で行われ参加者の交代にかかる時間はほぼ0秒。タイムロスを減らし短時間で演者とスタッフに負担が少なく大規模なイベントを可能にします。'
+      },
+      {
+        title: '画面そのまま2ショット撮影。スタンプ合成可能なデコショット',
+        disc: 'リミート®の特徴的な2画面割は、ビデオ通話で演者と参加者の一体感を高めるともに、デコショットを利用して同時の2ショット撮影を可能にしています。また当日の日付やロゴ・エンブレムを合成可能です。(特許出願中)'
+      },
+      {
+        title: 'プレミア大規模イベントがやりやすい',
+        disc: '2021年1月、33列同時刻実施の実績で、約4000回の接続をしています。YOUTUBEなど各配信サイトで行う一般公開のオンラインイベントとの差別化し、スポーツ団体向けの大規模イベントのノウハウで安定したイベント運営が可能です。'
+      },
+      {
+        title: 'New!マルチライン機能で複数口に対応',
+        disc: '演者数が多く、参加者が複数口の列形成が可能なイベント向けにマルチライン機能を搭載。同一のシリアル番号で被りのない複数口参加が可能です。'
+      }
+    ]
 include /component/globals/head.pug
   .page-wrap
     .container.main(style="display:none")
       .global-header
         include /component/globals/header.pug
       .global-body
+        section#first
+          .bg_border
+          .spacer(style="background-image: url(/images/hero.png)")
+          .catch
+            .small イベント実績多数。リミート®の回数15,000回突破(2021年1月実績)
+            .big 驚き!興奮!サプライズ!
         section.hero
           .section-content
             .flex
               .logo
-                img(src="/images/remeet-logo-small.png" width="80%")
+                img(src="/images/remeet-logo-small.png" width="60%")
               .title
                 each item in HEAD_LINE
                   span.inline-block #{item}
               p #{MAIN_COPY}
-              .sns
-                each item in SNS
-                  a(href=item.url) #{item.label}
             .flex
-              img(src="/images/remeet-mock.png", alt="製品画像")
+              img.img(src="/images/remeet-mock.png", alt="製品画像" width="300px" height="auto")
+          .section-action
+            a.btn(href="https://docs.google.com/forms/d/e/1FAIpQLScviZR3mgeyAO0f7ckb9BgXUBOr2PvfUpmtlTFbOsBS4mN3Sg/viewform") お問い合わせはこちらから
         section.section#playground
           h1
             .section-title 体験版
             .section-subtile PLAYGROUND
           .section-content
             p
-              .inline-block リミートを存分にお楽しみいただくために、
-              .inline-block イベント前にリミートの使用方法を
+              .inline-block リミート®を存分にお楽しみいただくために、
+              .inline-block イベント前にリミート®の使用方法を
               .inline-block 確認しておきましょう。
           .section-action
-            a.btn(href="https://event.remeet.live/n3VwOnlu/demo/") 事前にリミートを試してみる(接続のみ)
-            p ※参加すると実際に稼働中のリミート実機デモに接続します。簡易に体験したい場合は体験版を利用してください。
-            p ※2ショットのデモをご希望の場合はお問い合わせからご連絡ください。
+            a.btn(href="https://event.remeet.live/n3VwOnlu/demo/") 事前にリミート®を試してみる(接続のみ)
+            p ※メンテのため一時的に接続ができない場合は、時間をおいてアクセスしてください。
         section.section#results
           h1
             .section-title 実績
@@ -302,6 +335,17 @@ include /component/globals/head.pug
               display: flex;
               flex-direction: column;
             }
+        section.section#points
+          h1
+            .section-title リミート®の強み
+            .section-subtile POINTS
+          .section-content
+            each point,i in POINTS
+              .item
+                .title
+                  span.index 0#{i+1}
+                  span #{point.title}
+                .disc #{point.disc}
         section.section#partner
           h1
             .section-title オフィシャルパートナー
@@ -320,8 +364,6 @@ include /component/globals/head.pug
                         | (
                         a(href=`${item.link}`) #{item.link}
                         |)
-          .section-action
-            a.btn(href="https://docs.google.com/forms/d/e/1FAIpQLSfL6fbrZtQYBAilLmd3_3hg09jNHO99Go57QiLqDIq4UTzecw/viewform") 代理店・パートナー申請はこちら
         section.section#price
           h1
             .section-title 価格
