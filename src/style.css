@@ -378,6 +378,22 @@ img {
       }
     }
   }
+  #foruser {
+    .row {
+      display: flex;
+      justify-content: center;
+
+      .col {
+        /* flex-basis: 33%; */
+        text-align: center;
+
+
+        .attention {
+          font-size: 10px
+        }
+      }
+    }
+  }
 
   #results {
     .total-wrap {

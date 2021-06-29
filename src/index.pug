@@ -114,6 +114,12 @@ block vars
   -
     var RELEASES = [
       {
+        date: '2021-06-18',
+        tag: ['プレスリリース', 'リミート®実施'],
+        body: 'FC東京、会員限定オンラインイベントをリミート®ライブで開催決定！人気選手と個別オンライントーク＆2ショット撮影会を実施 7/31-8/1',
+        link: 'https://prtimes.jp/main/html/rd/p/000000010.000057781.html'
+      },
+      {
         date: '2020-12-12',
         tag: ['プレスリリース', 'リミート®実施'],
         body: '一般財団法人BOATRACE振興会様のオンライントークイベントをRe:Meet LIVEで実施致しました。テレボート会員様向けに事前応募抽選を行い、当選されたお客様にご参加頂きました 。選手（ボートレーサー）は自宅から運営本部とリモートでつなぎ、完全リモート状態で実施。イベント運営を株式会社クオラスが行い、システム貸し、特設サイト制作を当社が行いました。',
@@ -236,6 +242,22 @@ block vars
         disc: '演者数が多く、参加者が複数口の列形成が可能なイベント向けにマルチライン機能を搭載。同一のシリアル番号で被りのない複数口参加が可能です。'
       }
     ]
+  -
+    var FORUSER = [
+      {
+        label: 'ファミリーで参加',
+        img: 'foruser-1',
+        attention: '(イベントにより禁止されている場合があります)'
+      },
+        {
+        label: '文字を送る',
+        img: 'foruser-2'
+      },
+      {
+        label: '集めたグッズを飾る',
+        img: 'foruser-3'
+      }
+    ]
 include /component/globals/head.pug
   .page-wrap
     .container.main(style="display:none")
@@ -261,6 +283,15 @@ include /component/globals/head.pug
               img.img(src="/images/remeet-mock.png", alt="製品画像" width="300px" height="auto")
           .section-action
             a.btn(href="https://docs.google.com/forms/d/e/1FAIpQLScviZR3mgeyAO0f7ckb9BgXUBOr2PvfUpmtlTFbOsBS4mN3Sg/viewform") お問い合わせはこちらから
+        section.section#foruser
+          h1 参加の形は様々
+          .section-content
+            .row
+              each item in FORUSER 
+                .col
+                  .label #{item.label}
+                  .attention #{item.attention}
+                  img(srcset=`/images/${item.img}.jpg 1x, /images/${item.img}@2x.jpg 2x`, alt="", width="")
         section.section#playground
           h1
             .section-title 体験版
